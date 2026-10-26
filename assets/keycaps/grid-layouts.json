@@ -1,0 +1,7 @@
+{
+  "canvas": [1920,1080],
+  "board": {"width":565,"height":565,"padding":6},
+  "presets": [{"columns":3,"rows":3,"labels":"ABCDEFGHI"},{"columns":4,"rows":4,"labels":"ABCDEFGHIJKLMNOP"},{"columns":5,"rows":5,"labels":"ABCDEFGHIJKLMNOPQRSTUVWXY"}],
+  "gap_formula": "boardWidth / columns * 0.04",
+  "perspective": "identical front view; never perspective-warp individual keys"
+}
