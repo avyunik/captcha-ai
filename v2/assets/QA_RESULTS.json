@@ -1,0 +1,4657 @@
+{
+  "status": "passed",
+  "checks_passed": 926,
+  "checks_failed": 0,
+  "manifest_entries": 107,
+  "formats": {
+    "svg": 82,
+    "png": 13,
+    "css": 1,
+    "json": 2,
+    "ttf": 1,
+    "txt": 1,
+    "html": 6,
+    "js": 1
+  },
+  "browser": "Chromium, headless; actual HTTP",
+  "optional_file_scheme": "blocked_by_browser_administrator_policy; HTTP preview verified",
+  "tested_widths": [
+    1920,
+    1280,
+    960,
+    390
+  ],
+  "scope": "graphic integrity, UI component states and nonfunctional screen compositions; no gameplay tests",
+  "checks": [
+    {
+      "name": "unique_ids",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unique_paths",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:backgrounds/crt-screen.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:backgrounds/crt-screen.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:backgrounds/crt-screen.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:backgrounds/crt-screen.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:backgrounds/crt-screen.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:backgrounds/crt-screen.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:backgrounds/crt-screen.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:backgrounds/crt-screen.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:backgrounds/terminal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:backgrounds/terminal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:backgrounds/terminal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:backgrounds/terminal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:backgrounds/terminal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:backgrounds/terminal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:backgrounds/terminal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:backgrounds/terminal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:backgrounds/workshop.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:backgrounds/workshop.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:backgrounds/workshop.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:backgrounds/workshop.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "png_size:backgrounds/workshop.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:buttons/danger-disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:buttons/danger-disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:buttons/danger-disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:buttons/danger-disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:buttons/danger-disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:buttons/danger-disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:buttons/danger-disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:buttons/danger-disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:buttons/danger-hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:buttons/danger-hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:buttons/danger-hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:buttons/danger-hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:buttons/danger-hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:buttons/danger-hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:buttons/danger-hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:buttons/danger-hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:buttons/danger-normal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:buttons/danger-normal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:buttons/danger-normal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:buttons/danger-normal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:buttons/danger-normal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:buttons/danger-normal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:buttons/danger-normal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:buttons/danger-normal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:buttons/danger-pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:buttons/danger-pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:buttons/danger-pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:buttons/danger-pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:buttons/danger-pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:buttons/danger-pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:buttons/danger-pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:buttons/danger-pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:buttons/disabled-disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:buttons/disabled-disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:buttons/disabled-disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:buttons/disabled-disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:buttons/disabled-disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:buttons/disabled-disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:buttons/disabled-disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:buttons/disabled-disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:buttons/disabled-hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:buttons/disabled-hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:buttons/disabled-hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:buttons/disabled-hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:buttons/disabled-hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:buttons/disabled-hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:buttons/disabled-hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:buttons/disabled-hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:buttons/disabled-normal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:buttons/disabled-normal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:buttons/disabled-normal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:buttons/disabled-normal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:buttons/disabled-normal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:buttons/disabled-normal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:buttons/disabled-normal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:buttons/disabled-normal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:buttons/disabled-pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:buttons/disabled-pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:buttons/disabled-pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:buttons/disabled-pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:buttons/disabled-pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:buttons/disabled-pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:buttons/disabled-pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:buttons/disabled-pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:buttons/neutral-disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:buttons/neutral-disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:buttons/neutral-disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:buttons/neutral-disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:buttons/neutral-disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:buttons/neutral-disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:buttons/neutral-disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:buttons/neutral-disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:buttons/neutral-hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:buttons/neutral-hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:buttons/neutral-hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:buttons/neutral-hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:buttons/neutral-hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:buttons/neutral-hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:buttons/neutral-hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:buttons/neutral-hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:buttons/neutral-normal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:buttons/neutral-normal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:buttons/neutral-normal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:buttons/neutral-normal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:buttons/neutral-normal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:buttons/neutral-normal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:buttons/neutral-normal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:buttons/neutral-normal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:buttons/neutral-pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:buttons/neutral-pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:buttons/neutral-pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:buttons/neutral-pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:buttons/neutral-pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:buttons/neutral-pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:buttons/neutral-pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:buttons/neutral-pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:buttons/primary-disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:buttons/primary-disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:buttons/primary-disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:buttons/primary-disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:buttons/primary-disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:buttons/primary-disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:buttons/primary-disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:buttons/primary-disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:buttons/primary-hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:buttons/primary-hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:buttons/primary-hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:buttons/primary-hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:buttons/primary-hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:buttons/primary-hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:buttons/primary-hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:buttons/primary-hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:buttons/primary-normal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:buttons/primary-normal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:buttons/primary-normal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:buttons/primary-normal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:buttons/primary-normal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:buttons/primary-normal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:buttons/primary-normal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:buttons/primary-normal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:buttons/primary-pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:buttons/primary-pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:buttons/primary-pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:buttons/primary-pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:buttons/primary-pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:buttons/primary-pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:buttons/primary-pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:buttons/primary-pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:buttons/success-disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:buttons/success-disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:buttons/success-disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:buttons/success-disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:buttons/success-disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:buttons/success-disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:buttons/success-disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:buttons/success-disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:buttons/success-hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:buttons/success-hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:buttons/success-hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:buttons/success-hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:buttons/success-hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:buttons/success-hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:buttons/success-hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:buttons/success-hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:buttons/success-normal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:buttons/success-normal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:buttons/success-normal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:buttons/success-normal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:buttons/success-normal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:buttons/success-normal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:buttons/success-normal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:buttons/success-normal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:buttons/success-pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:buttons/success-pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:buttons/success-pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:buttons/success-pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:buttons/success-pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:buttons/success-pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:buttons/success-pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:buttons/success-pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:buttons/warning-disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:buttons/warning-disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:buttons/warning-disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:buttons/warning-disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:buttons/warning-disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:buttons/warning-disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:buttons/warning-disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:buttons/warning-disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:buttons/warning-hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:buttons/warning-hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:buttons/warning-hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:buttons/warning-hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:buttons/warning-hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:buttons/warning-hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:buttons/warning-hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:buttons/warning-hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:buttons/warning-normal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:buttons/warning-normal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:buttons/warning-normal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:buttons/warning-normal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:buttons/warning-normal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:buttons/warning-normal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:buttons/warning-normal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:buttons/warning-normal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:buttons/warning-pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:buttons/warning-pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:buttons/warning-pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:buttons/warning-pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:buttons/warning-pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:buttons/warning-pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:buttons/warning-pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:buttons/warning-pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:comics/caption.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:comics/caption.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:comics/caption.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:comics/caption.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:comics/caption.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:comics/caption.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:comics/caption.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:comics/caption.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:comics/scene-frame.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:comics/scene-frame.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:comics/scene-frame.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:comics/scene-frame.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:comics/scene-frame.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:comics/scene-frame.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:comics/scene-frame.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:comics/scene-frame.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:comics/speech.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:comics/speech.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:comics/speech.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:comics/speech.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:comics/speech.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:comics/speech.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:comics/speech.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:comics/speech.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:comics/students-surprised.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:comics/students-surprised.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:comics/students-surprised.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:comics/students-surprised.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "png_size:comics/students-surprised.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "alpha:comics/students-surprised.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "real_transparency:comics/students-surprised.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "transparent_corners:comics/students-surprised.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:comics/students.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:comics/students.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:comics/students.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:comics/students.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "png_size:comics/students.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "alpha:comics/students.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "real_transparency:comics/students.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "transparent_corners:comics/students.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:comics/thought.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:comics/thought.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:comics/thought.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:comics/thought.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:comics/thought.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:comics/thought.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:comics/thought.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:comics/thought.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:components.css",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:components.css",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:components.css",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:components.css",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:design-tokens.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:design-tokens.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:design-tokens.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:design-tokens.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:effects/dim.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:effects/dim.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:effects/dim.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:effects/dim.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:effects/dim.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:effects/dim.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:effects/dim.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:effects/dim.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:effects/key-pulse.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:effects/key-pulse.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:effects/key-pulse.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:effects/key-pulse.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:effects/key-pulse.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:effects/key-pulse.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:effects/key-pulse.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:effects/key-pulse.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:effects/scanlines.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:effects/scanlines.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:effects/scanlines.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:effects/scanlines.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:effects/scanlines.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:effects/scanlines.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:effects/scanlines.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:effects/scanlines.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:effects/success-burst.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:effects/success-burst.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:effects/success-burst.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:effects/success-burst.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:effects/success-burst.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:effects/success-burst.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:effects/success-burst.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:effects/success-burst.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:fonts/DejaVuSans.ttf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:fonts/DejaVuSans.ttf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:fonts/DejaVuSans.ttf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:fonts/DejaVuSans.ttf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:fonts/LICENSE.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:fonts/LICENSE.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:fonts/LICENSE.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:fonts/LICENSE.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:icons/check.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:icons/check.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:icons/check.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:icons/check.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:icons/check.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:icons/check.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:icons/check.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:icons/check.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:icons/download.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:icons/download.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:icons/download.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:icons/download.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:icons/download.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:icons/download.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:icons/download.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:icons/download.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:icons/error.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:icons/error.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:icons/error.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:icons/error.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:icons/error.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:icons/error.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:icons/error.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:icons/error.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:icons/grid.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:icons/grid.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:icons/grid.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:icons/grid.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:icons/grid.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:icons/grid.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:icons/grid.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:icons/grid.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:icons/home.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:icons/home.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:icons/home.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:icons/home.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:icons/home.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:icons/home.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:icons/home.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:icons/home.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:icons/next.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:icons/next.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:icons/next.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:icons/next.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:icons/next.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:icons/next.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:icons/next.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:icons/next.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:icons/reset.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:icons/reset.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:icons/reset.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:icons/reset.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:icons/reset.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:icons/reset.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:icons/reset.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:icons/reset.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:icons/robot.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:icons/robot.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:icons/robot.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:icons/robot.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:icons/robot.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:icons/robot.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:icons/robot.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:icons/robot.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:icons/skip.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:icons/skip.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:icons/skip.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:icons/skip.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:icons/skip.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:icons/skip.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:icons/skip.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:icons/skip.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:icons/timer.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:icons/timer.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:icons/timer.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:icons/timer.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:icons/timer.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:icons/timer.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:icons/timer.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:icons/timer.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:icons/trophy.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:icons/trophy.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:icons/trophy.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:icons/trophy.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:icons/trophy.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:icons/trophy.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:icons/trophy.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:icons/trophy.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:icons/undo.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:icons/undo.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:icons/undo.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:icons/undo.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:icons/undo.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:icons/undo.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:icons/undo.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:icons/undo.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:icons/users.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:icons/users.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:icons/users.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:icons/users.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:icons/users.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:icons/users.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:icons/users.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:icons/users.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:icons/warning.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:icons/warning.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:icons/warning.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:icons/warning.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:icons/warning.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:icons/warning.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:icons/warning.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:icons/warning.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:keycaps/active.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:keycaps/active.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:keycaps/active.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:keycaps/active.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:keycaps/active.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:keycaps/active.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:keycaps/active.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:keycaps/active.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:keycaps/disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:keycaps/disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:keycaps/disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:keycaps/disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:keycaps/disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:keycaps/disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:keycaps/disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:keycaps/disabled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:keycaps/grid-layouts.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:keycaps/grid-layouts.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:keycaps/grid-layouts.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:keycaps/grid-layouts.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:keycaps/hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:keycaps/hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:keycaps/hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:keycaps/hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:keycaps/hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:keycaps/hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:keycaps/hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:keycaps/hover.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:keycaps/inactive.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:keycaps/inactive.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:keycaps/inactive.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:keycaps/inactive.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:keycaps/inactive.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:keycaps/inactive.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:keycaps/inactive.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:keycaps/inactive.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:keycaps/light-blue.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:keycaps/light-blue.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:keycaps/light-blue.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:keycaps/light-blue.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:keycaps/light-blue.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:keycaps/light-blue.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:keycaps/light-blue.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:keycaps/light-blue.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:keycaps/light-green.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:keycaps/light-green.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:keycaps/light-green.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:keycaps/light-green.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:keycaps/light-green.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:keycaps/light-green.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:keycaps/light-green.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:keycaps/light-green.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:keycaps/pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:keycaps/pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:keycaps/pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:keycaps/pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:keycaps/pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:keycaps/pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:keycaps/pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:keycaps/pressed.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:keycaps/success.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:keycaps/success.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:keycaps/success.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:keycaps/success.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:keycaps/success.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:keycaps/success.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:keycaps/success.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:keycaps/success.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:keycaps/toggled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:keycaps/toggled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:keycaps/toggled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:keycaps/toggled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:keycaps/toggled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:keycaps/toggled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:keycaps/toggled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:keycaps/toggled.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:mascot/access_denied.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:mascot/access_denied.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:mascot/access_denied.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:mascot/access_denied.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "png_size:mascot/access_denied.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "alpha:mascot/access_denied.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "real_transparency:mascot/access_denied.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "transparent_corners:mascot/access_denied.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:mascot/celebrating.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:mascot/celebrating.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:mascot/celebrating.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:mascot/celebrating.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "png_size:mascot/celebrating.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "alpha:mascot/celebrating.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "real_transparency:mascot/celebrating.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "transparent_corners:mascot/celebrating.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:mascot/disappointed.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:mascot/disappointed.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:mascot/disappointed.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:mascot/disappointed.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "png_size:mascot/disappointed.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "alpha:mascot/disappointed.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "real_transparency:mascot/disappointed.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "transparent_corners:mascot/disappointed.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:mascot/explaining.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:mascot/explaining.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:mascot/explaining.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:mascot/explaining.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "png_size:mascot/explaining.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "alpha:mascot/explaining.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "real_transparency:mascot/explaining.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "transparent_corners:mascot/explaining.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:mascot/friendly.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:mascot/friendly.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:mascot/friendly.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:mascot/friendly.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "png_size:mascot/friendly.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "alpha:mascot/friendly.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "real_transparency:mascot/friendly.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "transparent_corners:mascot/friendly.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:mascot/hud-pixel.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:mascot/hud-pixel.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:mascot/hud-pixel.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:mascot/hud-pixel.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:mascot/hud-pixel.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:mascot/hud-pixel.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:mascot/hud-pixel.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:mascot/hud-pixel.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:mascot/human_confirmed.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:mascot/human_confirmed.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:mascot/human_confirmed.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:mascot/human_confirmed.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "png_size:mascot/human_confirmed.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "alpha:mascot/human_confirmed.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "real_transparency:mascot/human_confirmed.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "transparent_corners:mascot/human_confirmed.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:mascot/neutral.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:mascot/neutral.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:mascot/neutral.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:mascot/neutral.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "png_size:mascot/neutral.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "alpha:mascot/neutral.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "real_transparency:mascot/neutral.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "transparent_corners:mascot/neutral.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:mascot/skeptical.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:mascot/skeptical.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:mascot/skeptical.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:mascot/skeptical.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "png_size:mascot/skeptical.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "alpha:mascot/skeptical.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "real_transparency:mascot/skeptical.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "transparent_corners:mascot/skeptical.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:mascot/surprised.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:mascot/surprised.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:mascot/surprised.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:mascot/surprised.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "png_size:mascot/surprised.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "alpha:mascot/surprised.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "real_transparency:mascot/surprised.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "transparent_corners:mascot/surprised.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:mascot/thinking.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:mascot/thinking.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:mascot/thinking.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:mascot/thinking.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "png_size:mascot/thinking.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "alpha:mascot/thinking.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "real_transparency:mascot/thinking.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "transparent_corners:mascot/thinking.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:monitor/crt-frame.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:monitor/crt-frame.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:monitor/crt-frame.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:monitor/crt-frame.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:monitor/crt-frame.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:monitor/crt-frame.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:monitor/crt-frame.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:monitor/crt-frame.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:monitor/glass.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:monitor/glass.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:monitor/glass.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:monitor/glass.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:monitor/glass.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:monitor/glass.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:monitor/glass.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:monitor/glass.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:monitor/sticker-1.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:monitor/sticker-1.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:monitor/sticker-1.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:monitor/sticker-1.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:monitor/sticker-1.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:monitor/sticker-1.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:monitor/sticker-1.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:monitor/sticker-1.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:monitor/sticker-2.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:monitor/sticker-2.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:monitor/sticker-2.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:monitor/sticker-2.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:monitor/sticker-2.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:monitor/sticker-2.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:monitor/sticker-2.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:monitor/sticker-2.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:monitor/sticker-3.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:monitor/sticker-3.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:monitor/sticker-3.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:monitor/sticker-3.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:monitor/sticker-3.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:monitor/sticker-3.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:monitor/sticker-3.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:monitor/sticker-3.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:panels/current-move.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:panels/current-move.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:panels/current-move.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:panels/current-move.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:panels/current-move.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:panels/current-move.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:panels/current-move.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:panels/current-move.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:panels/hud-compact.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:panels/hud-compact.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:panels/hud-compact.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:panels/hud-compact.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:panels/hud-compact.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:panels/hud-compact.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:panels/hud-compact.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:panels/hud-compact.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:panels/hud-large.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:panels/hud-large.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:panels/hud-large.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:panels/hud-large.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:panels/hud-large.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:panels/hud-large.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:panels/hud-large.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:panels/hud-large.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:panels/hud-medium.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:panels/hud-medium.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:panels/hud-medium.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:panels/hud-medium.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:panels/hud-medium.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:panels/hud-medium.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:panels/hud-medium.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:panels/hud-medium.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:panels/input.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:panels/input.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:panels/input.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:panels/input.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:panels/input.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:panels/input.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:panels/input.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:panels/input.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:panels/level-result.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:panels/level-result.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:panels/level-result.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:panels/level-result.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:panels/level-result.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:panels/level-result.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:panels/level-result.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:panels/level-result.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:panels/level.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:panels/level.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:panels/level.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:panels/level.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:panels/level.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:panels/level.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:panels/level.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:panels/level.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:panels/message.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:panels/message.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:panels/message.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:panels/message.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:panels/message.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:panels/message.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:panels/message.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:panels/message.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:panels/modal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:panels/modal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:panels/modal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:panels/modal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:panels/modal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:panels/modal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:panels/modal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:panels/modal.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:panels/move-limit.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:panels/move-limit.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:panels/move-limit.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:panels/move-limit.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:panels/move-limit.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:panels/move-limit.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:panels/move-limit.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:panels/move-limit.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:panels/rules.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:panels/rules.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:panels/rules.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:panels/rules.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:panels/rules.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:panels/rules.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:panels/rules.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:panels/rules.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:panels/score.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:panels/score.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:panels/score.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:panels/score.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:panels/score.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:panels/score.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:panels/score.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:panels/score.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:panels/team.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:panels/team.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:panels/team.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:panels/team.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:panels/team.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:panels/team.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:panels/team.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:panels/team.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:panels/timer.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:panels/timer.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:panels/timer.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:panels/timer.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:panels/timer.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:panels/timer.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:panels/timer.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:panels/timer.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:popups/complete.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:popups/complete.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:popups/complete.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:popups/complete.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:popups/complete.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:popups/complete.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:popups/complete.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:popups/complete.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:popups/confirmation.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:popups/confirmation.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:popups/confirmation.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:popups/confirmation.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:popups/confirmation.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:popups/confirmation.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:popups/confirmation.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:popups/confirmation.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:popups/skipped.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:popups/skipped.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:popups/skipped.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:popups/skipped.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:popups/skipped.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:popups/skipped.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:popups/skipped.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:popups/skipped.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:popups/success.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:popups/success.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:popups/success.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:popups/success.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:popups/success.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:popups/success.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:popups/success.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:popups/success.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:popups/timeout.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:popups/timeout.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:popups/timeout.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:popups/timeout.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_size:popups/timeout.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_baked_text:popups/timeout.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_external_svg_images:popups/timeout.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "svg_renders:popups/timeout.svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:preview.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:preview.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:preview.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:preview.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:preview.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:preview.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:preview.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:preview.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:screens/intro.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:screens/intro.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:screens/intro.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:screens/intro.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:screens/main.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:screens/main.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:screens/main.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:screens/main.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:screens/popup.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:screens/popup.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:screens/popup.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:screens/popup.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:screens/results.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:screens/results.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:screens/results.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:screens/results.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exists:screens/training.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_path:screens/training.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "hash:screens/training.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http:screens/training.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "ukrainian_glyphs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "font_license",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "loaded_images:intro",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "single_1920_canvas:intro",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "text_fits:intro",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "loaded_images:training",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "single_1920_canvas:training",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "text_fits:training",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "training_no_timer",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "training_9_keys",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "training_locked_transition",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "loaded_images:main",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "single_1920_canvas:main",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "text_fits:main",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "main_allowed_controls",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "loaded_images:popup",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "single_1920_canvas:popup",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "text_fits:popup",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "loaded_images:results",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "single_1920_canvas:results",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "text_fits:results",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "result_4_cards",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "grid_3_labels",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "grid_3_square_equal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "grid_4_labels",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "grid_4_square_equal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "grid_5_labels",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "grid_5_square_equal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "modal_kind:success",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "modal_overlay_preserves_board:success",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "modal_text_fits:success",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "modal_kind:skipped",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "modal_overlay_preserves_board:skipped",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "modal_text_fits:skipped",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "modal_kind:timeout",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "modal_overlay_preserves_board:timeout",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "modal_text_fits:timeout",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "modal_kind:complete",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "modal_overlay_preserves_board:complete",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "modal_text_fits:complete",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "modal_kind:confirmation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "modal_overlay_preserves_board:confirmation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "modal_text_fits:confirmation",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "score_0_False",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "cards_sum_0_False",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "registration_threshold_0_False",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "4_cards_0_False",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "score_0_True",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "cards_sum_0_True",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "registration_threshold_0_True",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "4_cards_0_True",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "timeout_statuses_0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "score_25_False",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "cards_sum_25_False",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "registration_threshold_25_False",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "4_cards_25_False",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "score_25_True",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "cards_sum_25_True",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "registration_threshold_25_True",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "4_cards_25_True",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "timeout_statuses_25",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "score_50_False",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "cards_sum_50_False",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "registration_threshold_50_False",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "4_cards_50_False",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "score_50_True",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "cards_sum_50_True",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "registration_threshold_50_True",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "4_cards_50_True",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "timeout_statuses_50",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "score_75_False",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "cards_sum_75_False",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "registration_threshold_75_False",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "4_cards_75_False",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "score_75_True",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "cards_sum_75_True",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "registration_threshold_75_True",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "4_cards_75_True",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "timeout_statuses_75",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "score_100_False",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "cards_sum_100_False",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "registration_threshold_100_False",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "4_cards_100_False",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "score_100_True",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "cards_sum_100_True",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "registration_threshold_100_True",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "4_cards_100_True",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "timeout_statuses_100",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_registration_href",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "key_pulse_class",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "key_disabled_semantic",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "button_hover_svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "button_pressed_svg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "gallery_no_horizontal_overflow_1920",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "16_9_intro_1920",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "16_9_training_1920",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "16_9_main_1920",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "16_9_popup_1920",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "16_9_results_1920",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "gallery_no_horizontal_overflow_1280",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "16_9_intro_1280",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "16_9_training_1280",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "16_9_main_1280",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "16_9_popup_1280",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "16_9_results_1280",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "gallery_no_horizontal_overflow_960",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "16_9_intro_960",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "16_9_training_960",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "16_9_main_960",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "16_9_popup_960",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "16_9_results_960",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "gallery_no_horizontal_overflow_390",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "16_9_intro_390",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "16_9_training_390",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "16_9_main_390",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "16_9_popup_390",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "16_9_results_390",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_javascript_errors",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no_http_errors",
+      "passed": true,
+      "detail": []
+    }
+  ]
+}

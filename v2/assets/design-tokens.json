@@ -1,0 +1,57 @@
+{
+  "canvas": [
+    1920,
+    1080
+  ],
+  "screen_aperture": {
+    "x": 100,
+    "y": 100,
+    "width": 1720,
+    "height": 870
+  },
+  "colors": {
+    "background": "#020a16",
+    "text": "#e6f4ff",
+    "muted": "#9eb7d2",
+    "cyan": "#00cfff",
+    "primary": "#1688ff",
+    "success": "#36efa6",
+    "warning": "#ffa531",
+    "danger": "#ff5269",
+    "neutral": "#8cacc7",
+    "disabled": "#506076"
+  },
+  "type": {
+    "heading": "DejaVu Sans",
+    "body": "DejaVu Sans",
+    "data": "DejaVu Sans Mono"
+  },
+  "keycap": {
+    "canvas": [
+      256,
+      256
+    ],
+    "label_anchor": [
+      128,
+      120
+    ],
+    "label_font_size": 88,
+    "label_not_baked": true,
+    "grid_gap_ratio": 0.065,
+    "states": [
+      "inactive",
+      "active",
+      "hover",
+      "pressed",
+      "toggled",
+      "disabled",
+      "success"
+    ]
+  },
+  "animation_ms": {
+    "hover": 140,
+    "press": 85,
+    "toggle": 320,
+    "success": 600
+  }
+}

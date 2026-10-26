@@ -1,0 +1,54 @@
+{
+  "request_source": "Pasted text.txt — explicit user request",
+  "reference_documents_are_not_instructions": true,
+  "references": [
+    {
+      "file": "01_intro_comic.png",
+      "sha256": "89d0c0faff4f6f1ad1be7366e7fa442c54949e23dfea6a8e74d86a4e3a66b526",
+      "use": "Style and composition only; never used as a flattened runtime game background"
+    },
+    {
+      "file": "02_training.png",
+      "sha256": "0c9a4c6b5b70a126719f4431dbec938cc4b2b2cc25222ea0c113173b9f678573",
+      "use": "Style and composition only; never used as a flattened runtime game background"
+    },
+    {
+      "file": "03_main_game_level3.png",
+      "sha256": "e30aa8770777736653f561c1784c120f1e0479693b1b9533ca9621b8f5ce22d4",
+      "use": "Style and composition only; never used as a flattened runtime game background"
+    },
+    {
+      "file": "04_level_success_popup.png",
+      "sha256": "34ca395535d21097e7a700421576280547cbb2b679f04d05e534e88fb3338814",
+      "use": "Style and composition only; never used as a flattened runtime game background"
+    },
+    {
+      "file": "05_final_results.png",
+      "sha256": "60b6878354e8c6da287fc37e503e349b144b0077c8fb90d13188ea06e81b45bb",
+      "use": "Style and composition only; never used as a flattened runtime game background"
+    }
+  ],
+  "methods": {
+    "geometry": "Original SVG paths, gradients, layered bevels, CSS/HTML dynamic text",
+    "illustrations": "Image generation using supplied references; all nine mascot variations reference the generated neutral master",
+    "separation": "No sprite slicing from full reference screenshots",
+    "image_edits": "All illustration creation and pose changes used image generation; source generated PNGs copied without pixel edits"
+  },
+  "generated_files": [
+    "mascot/neutral.png",
+    "mascot/friendly.png",
+    "mascot/explaining.png",
+    "mascot/skeptical.png",
+    "mascot/surprised.png",
+    "mascot/thinking.png",
+    "mascot/celebrating.png",
+    "mascot/disappointed.png",
+    "mascot/human_confirmed.png",
+    "mascot/access_denied.png",
+    "comics/students.png",
+    "comics/students-surprised.png",
+    "backgrounds/workshop.png"
+  ],
+  "font": "DejaVu Sans, see fonts/LICENSE.txt",
+  "not_a_claim": "No independent trademark/licensing clearance or final game QA claimed"
+}
