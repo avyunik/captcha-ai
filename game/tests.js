@@ -58,14 +58,17 @@ export function runTests() {
   test('Рівні', 'Сумарний мінімум ходів посильний для 15 хв (≤ 20)', () => LEVELS.reduce((a, l) => a + l.min, 0) <= 20);
   LEVELS.forEach((lv) => test('Рівні', `Рівень ${lv.id}: контрольна відповідь ${lv.solution} розв\u2019язує поле`, () => P.isSolved(P.applyPresses(P.parseBoard(lv.start), lv.n, lv.solution), lv.target)));
   test('Рівні', 'Розміри полів: 3, 4, 4, 5', () => eq(LEVELS.map((l) => l.n), [3, 4, 4, 5]));
-  test('Рівні', 'Складність рівна: мінімум 3–4 ходи на кожен рівень', () => LEVELS.every((l) => l.min >= 3 && l.min <= 4));
-  LEVELS.forEach((lv) => test('Рівні', `Рівень ${lv.id}: різниця «старт/зразок» 7–11 клітинок, перетин зон натискань ≤ 3`, () => {
+  test('Рівні', 'Складність зростає: мінімум 3 → 4 → 5 → 6 ходів, ліміт = мінімум + 3', () => eq(LEVELS.map((l) => l.min), [3, 4, 5, 6]) && LEVELS.every((l) => l.limit === l.min + 3));
+  test('Рівні', 'Стартові малюнки й зразки симетричні', () => LEVELS.every((l) => [l.start, l.target].every((str) => { const n = l.n, b = P.parseBoard(str); const h = b.every((v, i) => v === b[Math.floor(i / n) * n + n - 1 - (i % n)]); const vv = b.every((v, i) => v === b[(n - 1 - Math.floor(i / n)) * n + (i % n)]); const d = b.every((v, i) => v === b[(i % n) * n + Math.floor(i / n)]); return h || vv || d; })));
+  LEVELS.forEach((lv) => test('Рівні', `Рівень ${lv.id}: накладання зон натискань = ${lv.overlap}, зразок не строкатий`, () => {
     const cnt = new Array(lv.n * lv.n).fill(0);
     for (const c of lv.solution) for (const j of P.affected(lv.n, idx(c))) cnt[j]++;
     const diff = cnt.filter((c) => c % 2).length;
     const over = cnt.filter((c) => c >= 2).length;
-    return { ok: diff >= 7 && diff <= 11 && over <= 3, detail: `різниця ${diff}, перетин ${over}` };
+    let busy = 0; const tb = P.parseBoard(lv.target), n = lv.n; for (let k = 0; k < n * n; k++) { if (k % n < n - 1 && tb[k] !== tb[k + 1]) busy++; if (k + n < n * n && tb[k] !== tb[k + n]) busy++; }
+    return { ok: over === lv.overlap && busy <= 16 && diff >= 8, detail: `різниця ${diff}, перетин ${over}, строкатість ${busy}` };
   }));
+  test('Рівні', 'Накладання зростає від рівня до рівня', () => LEVELS.every((l, i) => i === 0 || l.overlap > LEVELS[i - 1].overlap));
 
   // ── Хід гри
   test('Гра', 'Таймер не запускається на тренуванні', () => { const s = S.startTraining('A'); return s.deadline === null && s.startedAt === null; });

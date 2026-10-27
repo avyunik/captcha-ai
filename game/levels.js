@@ -4,8 +4,12 @@
 // solution — контрольна мінімальна відповідь (літери; порядок натискань неважливий).
 // min — мінімальна кількість натискань (solver.js: GF(2) + перебір ядра).
 // limit — ліміт ходів на одну спробу: точний мінімум + 3 ходи запасу.
-// Складність вирівняна: мінімум 3–4 натискання, різниця «старт/зразок» 8–10 клітинок,
-// зони натискань перетинаються лише у 2 клітинках, мінімальний розв'язок єдиний.
+// overlap — у скількох клітинках зони натискань накладаються (там ефекти взаємно гасяться,
+//   тому розв'язок не «читається» з поля напряму — головний чинник складності для людини).
+// Складність зростає за трьома параметрами одночасно: розмір поля (3→4→4→5),
+// кількість ходів (3→4→5→6) і накладання (1→2→4→6). Зразки — прості контурні фігури
+// (не «строкаті» на кшталт шахівниці, яку важко порівнювати очима). Мінімальний розв'язок єдиний.
+// Орієнтир: ~1 / 2 / 3 / 3–4 хв, разом 8–10 хв для середньої команди.
 // minSolutionsCount — скільки різних мінімальних розв'язків існує.
 //
 // Перевірка: відкрийте «Тести.dc.html» — він перераховує все наново.
@@ -23,8 +27,8 @@ export const TRAINING = Object.freeze({
 });
 
 export const LEVELS = Object.freeze([
-  Object.freeze({ id: 1, name: 'Сонячна брама', n: 3, start: '111000101', target: '010111010', solution: 'ACH', min: 3, limit: 6, minSolutionsCount: 1 }),
-  Object.freeze({ id: 2, name: 'Шахова мозаїка', n: 4, start: '0101100110010101', target: '1010010110100101', solution: 'AGH', min: 3, limit: 6, minSolutionsCount: 1 }),
-  Object.freeze({ id: 3, name: 'Ворота храму', n: 4, start: '0010010101010010', target: '1001111111111001', solution: 'ACMO', min: 4, limit: 7, minSolutionsCount: 1 }),
-  Object.freeze({ id: 4, name: 'Сонячний диск', n: 5, start: '0101001110100010111001010', target: '0010001110111110111000100', solution: 'CMW', min: 3, limit: 6, minSolutionsCount: 1 }),
+  Object.freeze({ id: 1, name: 'Сонячна брама', n: 3, start: '111000101', target: '010111010', solution: 'ACH', min: 3, limit: 6, overlap: 1, minSolutionsCount: 1 }),
+  Object.freeze({ id: 2, name: 'Храмова рамка', n: 4, start: '0110111100000000', target: '1111100110011111', solution: 'BCMP', min: 4, limit: 7, overlap: 2, minSolutionsCount: 1 }),
+  Object.freeze({ id: 3, name: 'Вікно обсерваторії', n: 4, start: '0111101111001101', target: '0000011001100000', solution: 'DFKMP', min: 5, limit: 8, overlap: 4, minSolutionsCount: 1 }),
+  Object.freeze({ id: 4, name: 'Великий хрест', n: 5, start: '1111111111011100111001110', target: '0010000100111110010000100', solution: 'BDKOQS', min: 6, limit: 9, overlap: 6, minSolutionsCount: 1 }),
 ]);

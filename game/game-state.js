@@ -289,6 +289,12 @@ export function finishEarly(s0, now) {
   return finish(clone(s0), 'early', now);
 }
 
+/** «Здатися»: гра завершується одразу, зароблені бали зберігаються. */
+export function surrender(s0, now) {
+  if (s0.stage !== 'main' || s0.finished) return s0;
+  return finish(clone(s0), 'surrender', now);
+}
+
 /** Завершення гри. Для таймауту показується попап «Час вичерпано», інакше — одразу результати. */
 function finish(s, reason, now, showTimeoutModal = true) {
   if (s.finished) return s;

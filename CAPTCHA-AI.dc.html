@@ -24,7 +24,7 @@ h1,h2,h3,p{margin:0}
 <div style="position:fixed;inset:0;background:#03070e;overflow:hidden;font-family:Terminal,'DejaVu Sans',Arial,sans-serif;color:#e6f4ff;user-select:none;-webkit-user-select:none">
 <div ref="{{ stageRef }}" data-screen-label="{{ screenLabel }}" style="position:absolute;left:50%;top:50%;width:1920px;height:1080px;margin-left:-960px;margin-top:-540px;transform:scale({{ scale }});transform-origin:center;background:#050b14 url(assets/backgrounds/workshop.png) center/cover;font-size:25px;line-height:1.35">
 
-<div style="position:absolute;left:100px;top:100px;width:1720px;height:870px;padding:32px 40px;background:#020a16 url(assets/backgrounds/crt-screen.svg) center/100% 100%;border-radius:30px;overflow:hidden">
+<div ref="{{ screenRef }}" style="position:absolute;left:100px;top:100px;width:1720px;height:870px;padding:32px 40px;background:#020a16 url(assets/backgrounds/crt-screen.svg) center/100% 100%;border-radius:30px;overflow:hidden">
 
 <sc-if value="{{ notReady }}" hint-placeholder-val="{{ true }}">
 <div style="height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;color:#9eb7d2;font-size:28px;text-align:center">
@@ -36,31 +36,48 @@ h1,h2,h3,p{margin:0}
 <!-- ЕКРАН 1: ВСТУП -->
 <sc-if value="{{ isIntro }}" hint-placeholder-val="{{ false }}">
 <div style="height:100%;display:flex;flex-direction:column">
-<div style="height:100px;display:flex;align-items:center;justify-content:space-between;gap:30px">
-<div style="transform:rotate(-1deg);padding:10px 26px 12px;background:#eee8db;color:#101a2a;box-shadow:7px 6px 0 #183652">
-<h1 style="font-size:46px;text-transform:uppercase;line-height:1.05;letter-spacing:-.01em">Доведи, що ти людина!</h1>
-<div style="font-size:21px;font-weight:700;color:#1d4f86;margin-top:4px;text-transform:uppercase;letter-spacing:.02em">Капча, яку ніхто не просив</div>
+<div style="height:112px;display:grid;grid-template-columns:260px 1fr 260px;align-items:center;gap:20px">
+<div></div>
+<div style="display:flex;align-items:center;justify-content:center;gap:26px">
+<div style="display:flex;flex-direction:column;gap:9px;align-items:flex-end"><i style="display:block;width:34px;height:5px;background:#29d3ff;box-shadow:0 0 10px #00b5ff;transform:rotate(28deg)"></i><i style="display:block;width:46px;height:5px;background:#29d3ff;box-shadow:0 0 10px #00b5ff"></i><i style="display:block;width:34px;height:5px;background:#29d3ff;box-shadow:0 0 10px #00b5ff;transform:rotate(-28deg)"></i></div>
+<div style="text-align:center">
+<h1 style="font-size:66px;line-height:1;font-weight:700;text-transform:uppercase;letter-spacing:.01em;color:#f2fdff;text-shadow:0 0 6px #7fe9ff,0 0 22px #00a8ff,0 4px 0 #0a3c6e;white-space:nowrap">Доведи, що ти людина!</h1>
+<div style="font-size:24px;font-weight:700;color:#36e3ff;margin-top:10px;text-shadow:0 0 12px #00a8ff88;white-space:nowrap">Капча для реєстрації на конкурс «Логічні лабіринти»</div>
 </div>
-<div style="font-size:19px;color:#7edbff;line-height:1.45;text-align:right">РЕЄСТРАЦІЯ НА СТУДЕНТСЬКИЙ КОНКУРС<br>«ЛОГІЧНІ ЛАБІРИНТИ»</div>
+<div style="display:flex;flex-direction:column;gap:9px;align-items:flex-start"><i style="display:block;width:34px;height:5px;background:#29d3ff;box-shadow:0 0 10px #00b5ff;transform:rotate(-28deg)"></i><i style="display:block;width:46px;height:5px;background:#29d3ff;box-shadow:0 0 10px #00b5ff"></i><i style="display:block;width:34px;height:5px;background:#29d3ff;box-shadow:0 0 10px #00b5ff;transform:rotate(28deg)"></i></div>
+</div>
+<div style="justify-self:end;display:flex;align-items:center;gap:14px;padding:12px 18px;border:2px solid #1f6f9c;border-radius:10px;background:#061a30cc;box-shadow:0 0 14px #00a8ff44">
+<img src="assets/icons/trophy.svg" alt="" style="width:48px;height:48px;filter:drop-shadow(0 0 8px #ffc94d)">
+<div style="line-height:1.15"><div style="font-size:21px;font-weight:700;color:#e8f6ff;text-transform:uppercase">Логічні<br>лабіринти</div><div style="font-size:14px;color:#6fc9f0;margin-top:3px;text-transform:uppercase;letter-spacing:.04em">студентський конкурс</div></div>
+</div>
 </div>
 
-<div style="height:340px;display:grid;grid-template-columns:1.15fr .8fr 1fr;gap:18px;margin:16px 0 18px">
-<div style="position:relative;background:linear-gradient(145deg,#102d4c,#071321);border:3px solid #9dd9ff;overflow:hidden;transform:rotate(-.6deg);isolation:isolate">
-<img src="assets/comics/students.png" alt="Студентська команда біля ноутбука" draggable="false" style="position:absolute;width:100%;height:100%;object-fit:contain;object-position:bottom;bottom:-15px;left:40px">
-<div style="position:absolute;top:10px;left:14px;width:58%;height:132px;background:url(assets/comics/speech.svg) center/100% 100%;padding:16px 20px 30px;color:#152639;font-size:19px;font-weight:700;line-height:1.35;z-index:1">Нарешті! Реєстрацію на «Логічні лабіринти» відкрито!</div>
+<div style="height:350px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:12px 0 16px">
+<div style="position:relative;border-radius:16px;border:3px solid #39c8ff;box-shadow:0 0 18px #00a8ff88,inset 0 0 22px #0090ff44;overflow:hidden;isolation:isolate;background:radial-gradient(ellipse at 50% 85%,#1a4a78 0%,#0b2240 55%,#061226 100%)">
+<div style="position:absolute;top:10px;left:10px;z-index:3;width:46px;height:46px;border-radius:50%;background:#062448;border:3px solid #5fd8ff;box-shadow:0 0 12px #00b5ff;display:grid;place-items:center;font-size:26px;font-weight:700;color:#fff">1</div>
+<div style="position:absolute;top:12px;left:62px;right:14px;z-index:2;background:#f4f7fb;color:#13233a;border:2px solid #0b1a2b;border-radius:12px;padding:8px 14px;font-size:18px;font-weight:700;line-height:1.3;box-shadow:4px 5px 0 #0008;text-wrap:pretty">Організатори конкурсу вирішили захистити реєстрацію від ботів.</div>
+<img src="assets/comics/students.png" alt="Студенти радіють відкриттю реєстрації" draggable="false" style="position:absolute;right:-10px;bottom:-8px;width:96%;height:74%;object-fit:contain;object-position:right bottom">
+<div style="position:absolute;left:10px;bottom:14px;z-index:2;width:205px;background:#f4f7fb;color:#13233a;border:2px solid #0b1a2b;border-radius:16px;padding:9px 13px;font-size:17px;font-weight:700;line-height:1.25;transform:rotate(-6deg);box-shadow:4px 5px 0 #0008">Нарешті! Реєструємось на конкурс «Логічні лабіринти»!</div>
 </div>
-<div style="position:relative;background:linear-gradient(145deg,#102d4c,#071321);border:3px solid #9dd9ff;overflow:hidden;transform:rotate(.8deg);isolation:isolate">
-<div style="position:absolute;inset:24px 22px 22px;border:3px solid #278cca;border-radius:8px;background:#d4e8f9;color:#13263e;padding:16px 20px;font-size:17px;transform:rotate(-3deg);box-shadow:9px 14px 0 #0005;display:flex;flex-direction:column;gap:8px">
-<b style="display:block;border-bottom:1px solid #6c94b9;padding-bottom:8px;font-size:18px">ТЗ для штучного інтелекту</b>
-<div style="font-style:italic;line-height:1.3">«Створити перевірку, яку не зможе пройти жоден бот»</div>
-<div style="display:flex;justify-content:space-between;gap:10px;padding:6px 9px;background:#fff8;border:1px solid #92bad9"><span>Заблоковано ботів</span><b>100%</b></div>
-<div style="display:flex;justify-content:space-between;gap:10px;padding:6px 9px;background:#fff8;border:1px solid #92bad9"><span>Зареєстровано студентів</span><b>0</b></div>
-<div style="padding:6px 9px;background:#f26a68;color:#341017;font-weight:700;text-align:center">ДОСТУП ЗАБЛОКОВАНО</div>
+<div style="position:relative;border-radius:16px;border:3px solid #39c8ff;box-shadow:0 0 18px #00a8ff88,inset 0 0 22px #0090ff44;overflow:hidden;isolation:isolate;background:radial-gradient(ellipse at 50% 85%,#1a4a78 0%,#0b2240 55%,#061226 100%)">
+<div style="position:absolute;top:10px;left:10px;z-index:3;width:46px;height:46px;border-radius:50%;background:#062448;border:3px solid #5fd8ff;box-shadow:0 0 12px #00b5ff;display:grid;place-items:center;font-size:26px;font-weight:700;color:#fff">2</div>
+<div style="position:absolute;top:12px;left:62px;right:14px;z-index:2;background:#f4f7fb;color:#13233a;border:2px solid #0b1a2b;border-radius:12px;padding:8px 14px;font-size:18px;font-weight:700;line-height:1.3;box-shadow:4px 5px 0 #0008;text-wrap:pretty">У ТЗ написали лише: «Зробіть таку перевірку, яку не пройде жоден бот».</div>
+<div style="position:absolute;left:18px;top:98px;width:200px;z-index:1;border:2px solid #4fb7ec;border-radius:8px;background:#0b2a4a;padding:8px;transform:rotate(-4deg);box-shadow:0 0 14px #0090ff55">
+<div style="font-size:14px;color:#cfeaff;margin-bottom:6px;display:flex;align-items:center;gap:6px"><i style="display:block;width:10px;height:10px;border-radius:50%;border:2px solid #cfeaff"></i>Технічне завдання:</div>
+<div style="background:#eef5fb;color:#13233a;padding:8px 10px;font-size:17px;font-weight:700;line-height:1.25">Зробіть таку перевірку, яку не пройде жоден бот.</div>
 </div>
+<img src="assets/mascot/friendly.png" alt="CAPTCHA AI береться до роботи" draggable="false" style="position:absolute;right:-40px;bottom:-30px;height:310px;width:auto">
+<div style="position:absolute;left:30px;bottom:12px;z-index:2;width:200px;background:#f4f7fb;color:#13233a;border:2px solid #0b1a2b;border-radius:16px;padding:8px 12px;font-size:17px;font-weight:700;line-height:1.25;text-align:center;box-shadow:4px 5px 0 #0008">Зрозуміло. Виконаю ідеально.</div>
 </div>
-<div style="position:relative;background:linear-gradient(145deg,#102d4c,#071321);border:3px solid #9dd9ff;overflow:hidden;transform:rotate(-.3deg);isolation:isolate">
-<img src="assets/mascot/explaining.png" alt="CAPTCHA AI пояснює" draggable="false" style="position:absolute;height:310px;right:-18px;bottom:-15px">
-<div style="position:absolute;top:10px;left:14px;width:60%;height:140px;background:url(assets/comics/speech.svg) center/100% 100%;padding:16px 20px 30px;color:#152639;font-size:19px;font-weight:700;line-height:1.35;z-index:1">«Захист працює бездоганно». Навіть розробники не пройшли.</div>
+<div style="position:relative;border-radius:16px;border:3px solid #39c8ff;box-shadow:0 0 18px #00a8ff88,inset 0 0 22px #0090ff44;overflow:hidden;isolation:isolate;background:radial-gradient(ellipse at 50% 85%,#1a4a78 0%,#0b2240 55%,#061226 100%)">
+<div style="position:absolute;top:10px;left:10px;z-index:3;width:46px;height:46px;border-radius:50%;background:#062448;border:3px solid #5fd8ff;box-shadow:0 0 12px #00b5ff;display:grid;place-items:center;font-size:26px;font-weight:700;color:#fff">3</div>
+<div style="position:absolute;top:12px;left:62px;right:14px;z-index:2;background:#f4f7fb;color:#13233a;border:2px solid #0b1a2b;border-radius:12px;padding:8px 14px;font-size:18px;font-weight:700;line-height:1.3;box-shadow:4px 5px 0 #0008;text-wrap:pretty">Наступного ранку не зміг зареєструватися взагалі ніхто.</div>
+<img src="assets/comics/students-surprised.png" alt="Розгублені студенти" draggable="false" style="position:absolute;left:-14px;bottom:30px;width:78%;height:62%;object-fit:contain;object-position:left bottom">
+<div style="position:absolute;right:12px;top:94px;z-index:2;width:178px;background:#3a0a14;color:#fff;border:3px solid #ff4d6a;border-radius:16px;padding:9px 12px;font-size:18px;font-weight:700;line-height:1.25;text-align:center;box-shadow:0 0 16px #ff2d55aa">Спочатку доведіть, що ви людина.</div>
+<div style="position:absolute;left:14px;right:14px;bottom:12px;z-index:2;display:flex;align-items:center;gap:12px;padding:8px 14px;border:2px solid #ff4d6a;border-radius:10px;background:#1a0710e6;box-shadow:0 0 14px #ff2d5577">
+<img src="assets/icons/warning.svg" alt="" style="width:30px;height:30px;flex-shrink:0">
+<div style="flex:1;display:grid;grid-template-columns:1fr auto;gap:0 12px;font-size:16px;color:#f1e6ea;line-height:1.35"><span>Заблоковано ботів:</span><b style="color:#ff5269">100%</b><span>Зареєстровано студентів:</span><b style="color:#ff5269">0</b></div>
+</div>
 </div>
 </div>
 
@@ -74,7 +91,7 @@ h1,h2,h3,p{margin:0}
 <div style="position:relative;background:url(assets/panels/hud-medium.svg) center/100% 100%;padding:26px 34px;display:flex;flex-direction:column">
 <h3 style="font-size:28px;color:#11deee;display:flex;align-items:center;gap:15px;margin-bottom:12px"><img src="assets/icons/grid.svg" alt="" style="width:34px;height:34px">ЯК ЦЕ ПРАЦЮЄ</h3>
 <div style="display:flex;gap:24px;align-items:center">
-<div style="width:140px;flex-shrink:0;display:grid;grid-template-columns:repeat(3,1fr);gap:3px">
+<div style="width:124px;flex-shrink:0;display:grid;grid-template-columns:repeat(3,1fr);gap:3px">
 <sc-for list="{{ introKeys }}" as="k" hint-placeholder-count="9">
 <div style="position:relative;aspect-ratio:1;color:{{ k.color }};text-shadow:{{ k.shadow }}"><img src="{{ k.src }}" alt="" style="position:absolute;inset:0;width:100%;height:100%"><span style="position:absolute;inset:0;display:grid;place-items:center;transform:translateY(-3%);font-size:20px;font-weight:700">{{ k.letter }}</span></div>
 </sc-for>
@@ -86,7 +103,7 @@ h1,h2,h3,p{margin:0}
 <div style="color:#36efa6">Далі 4 рівні × 25 балів і таймер {{ timerMinutes }} хв.</div>
 </div>
 </div>
-<button type="button" onClick="{{ onStartTraining }}" style="margin-top:auto;height:72px;border:0;padding:8px 20px 16px;background:transparent url(assets/buttons/primary-normal.svg) center/100% 100%;color:#ecf8ff;display:flex;align-items:center;justify-content:center;gap:16px;font-size:25px;font-weight:700;white-space:nowrap;cursor:pointer" style-hover="background-image:url(assets/buttons/primary-hover.svg)" style-active="background-image:url(assets/buttons/primary-pressed.svg);padding-top:14px;padding-bottom:10px"><img src="assets/icons/next.svg" alt="" style="width:30px;height:30px;filter:brightness(1.5)"><span>ПЕРЕЙТИ ДО ТРЕНУВАННЯ</span></button>
+<button type="button" onClick="{{ onStartTraining }}" style="margin-top:auto;height:72px;border:0;padding:8px 20px 16px;background:transparent url(assets/buttons/primary-normal.svg) center/100% 100%;color:#ecf8ff;display:flex;align-items:center;justify-content:center;gap:16px;font-size:25px;font-weight:700;white-space:nowrap;cursor:pointer;transition:transform .14s ease-out,filter .14s" style-hover="background-image:url(assets/buttons/primary-hover.svg);transform:translateY(-2px)" style-active="background-image:url(assets/buttons/primary-pressed.svg);padding-top:14px;padding-bottom:10px"><img src="assets/icons/next.svg" alt="" style="width:30px;height:30px;filter:brightness(1.5)"><span>ПЕРЕЙТИ ДО ТРЕНУВАННЯ</span></button>
 </div>
 </div>
 </div>
@@ -136,9 +153,11 @@ h1,h2,h3,p{margin:0}
 <div ref="{{ boardRef }}" style="display:flex;align-items:center;justify-content:center;background:url(assets/panels/hud-large.svg) center/100% 100%;position:relative">
 <div style="width:565px;height:565px;display:grid;grid-template-columns:{{ boardCols }};gap:{{ boardGap }};padding:6px">
 <sc-for list="{{ keys }}" as="k" hint-placeholder-count="9">
-<button type="button" data-key-idx="{{ k.idx }}" disabled="{{ k.disabled }}" aria-label="{{ k.aria }}" aria-pressed="{{ k.on }}" onClick="{{ k.onPress }}" style="position:relative;aspect-ratio:1;background:none;border:0;padding:0;display:block;isolation:isolate;cursor:{{ k.cursor }};touch-action:manipulation;transition:filter .14s,transform .085s;color:{{ k.color }};text-shadow:{{ k.shadow }};-webkit-tap-highlight-color:transparent" style-hover="filter:brightness(1.2)" style-active="transform:translateY(2%) scale(.985)">
+<button type="button" data-key-idx="{{ k.idx }}" disabled="{{ k.disabled }}" aria-label="{{ k.aria }}" aria-pressed="{{ k.on }}" onClick="{{ k.onPress }}" onMouseEnter="{{ k.onHover }}" onMouseLeave="{{ k.onLeave }}" onFocus="{{ k.onHover }}" onBlur="{{ k.onLeave }}" style="position:relative;aspect-ratio:1;background:none;border:0;padding:0;display:block;isolation:isolate;cursor:{{ k.cursor }};touch-action:manipulation;transition:transform .15s ease-out;color:{{ k.color }};text-shadow:{{ k.shadow }};-webkit-tap-highlight-color:transparent" style-active="transform:translateY(1.5%) scale(.97)">
 <img src="{{ k.src }}" alt="" draggable="false" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;pointer-events:none">
 <img data-pulse="1" src="assets/effects/key-pulse.svg" alt="" draggable="false" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;pointer-events:none;opacity:0">
+<i style="position:absolute;inset:9% 9% 13%;border-radius:12%;pointer-events:none;z-index:1;opacity:{{ k.pvOpacity }};background:{{ k.pvBg }};border:2px solid {{ k.pvDot }};transition:opacity .15s ease"></i>
+<i style="position:absolute;left:50%;bottom:13%;width:9%;height:9%;margin-left:-4.5%;border-radius:50%;pointer-events:none;z-index:2;opacity:{{ k.pvOpacity }};background:{{ k.pvDot }};box-shadow:{{ k.pvDotGlow }};transition:opacity .2s ease"></i>
 <span style="position:absolute;inset:0;display:grid;place-items:center;transform:translateY(-3%);font-size:{{ k.fs }};font-weight:700;line-height:1;pointer-events:none">{{ k.letter }}</span>
 <sc-if value="{{ k.mark }}" hint-placeholder-val="{{ false }}"><i style="position:absolute;left:19%;top:17%;width:11%;height:11%;transform:rotate(45deg);pointer-events:none;background:{{ k.markBg }};border:2px solid {{ k.markBorder }};box-shadow:{{ k.markShadow }}"></i></sc-if>
 </button>
@@ -201,13 +220,14 @@ h1,h2,h3,p{margin:0}
 </div>
 
 <div style="height:88px;display:flex;gap:24px;margin-top:14px">
-<button type="button" disabled="{{ undoDisabled }}" onClick="{{ onUndo }}" style="flex:1;border:0;padding:8px 20px 16px;background:transparent url({{ undoBg }}) center/100% 100%;color:{{ undoColor }};display:flex;align-items:center;justify-content:center;gap:16px;font-size:25px;font-weight:700;white-space:nowrap;cursor:pointer;pointer-events:{{ undoPe }};transition:filter .14s" style-hover="filter:brightness(1.15)" style-active="transform:translateY(3px)"><img src="assets/icons/undo.svg" alt="" style="width:30px;height:30px;filter:brightness(1.5)"><span>Скасувати хід</span></button>
-<button type="button" onClick="{{ onReset }}" style="flex:1;border:0;padding:8px 20px 16px;background:transparent url(assets/buttons/warning-normal.svg) center/100% 100%;color:#fff3e2;display:flex;align-items:center;justify-content:center;gap:16px;font-size:25px;font-weight:700;white-space:nowrap;cursor:pointer" style-hover="background-image:url(assets/buttons/warning-hover.svg)" style-active="background-image:url(assets/buttons/warning-pressed.svg);padding-top:14px;padding-bottom:10px"><img src="assets/icons/reset.svg" alt="" style="width:30px;height:30px;filter:brightness(1.5)"><span>{{ resetLabel }}</span></button>
+<button type="button" disabled="{{ undoDisabled }}" onClick="{{ onUndo }}" style="flex:1;border:0;padding:8px 20px 16px;background:transparent url({{ undoBg }}) center/100% 100%;color:{{ undoColor }};display:flex;align-items:center;justify-content:center;gap:16px;font-size:25px;font-weight:700;white-space:nowrap;cursor:pointer;pointer-events:{{ undoPe }};transition:filter .14s,transform .14s ease-out" style-hover="filter:brightness(1.15);transform:translateY(-2px)" style-active="transform:translateY(3px)"><img src="assets/icons/undo.svg" alt="" style="width:30px;height:30px;filter:brightness(1.5)"><span>Скасувати хід</span></button>
+<button type="button" onClick="{{ onReset }}" style="flex:1;border:0;padding:8px 20px 16px;background:transparent url(assets/buttons/warning-normal.svg) center/100% 100%;color:#fff3e2;display:flex;align-items:center;justify-content:center;gap:16px;font-size:25px;font-weight:700;white-space:nowrap;cursor:pointer;transition:transform .14s ease-out,filter .14s" style-hover="background-image:url(assets/buttons/warning-hover.svg);transform:translateY(-2px)" style-active="background-image:url(assets/buttons/warning-pressed.svg);padding-top:14px;padding-bottom:10px"><img src="assets/icons/reset.svg" alt="" style="width:30px;height:30px;filter:brightness(1.5)"><span>{{ resetLabel }}</span></button>
 <sc-if value="{{ isTraining }}" hint-placeholder-val="{{ false }}">
-<button type="button" disabled="{{ nextDisabled }}" onClick="{{ onStartMain }}" style="flex:1;border:0;padding:8px 20px 16px;background:transparent url({{ nextBg }}) center/100% 100%;color:{{ nextColor }};display:flex;align-items:center;justify-content:center;gap:16px;font-size:25px;font-weight:700;white-space:nowrap;cursor:pointer;pointer-events:{{ nextPe }};transition:filter .14s" style-hover="filter:brightness(1.15)" style-active="transform:translateY(3px)"><img src="{{ nextIcon }}" alt="" style="width:30px;height:30px;filter:brightness(1.5)"><span style="display:flex;flex-direction:column;align-items:flex-start;line-height:1.15"><span>До основної гри</span><span style="font-size:15px;font-weight:400;opacity:.85">{{ nextSub }}</span></span></button>
+<button type="button" disabled="{{ nextDisabled }}" onClick="{{ onStartMain }}" style="flex:1;border:0;padding:8px 20px 16px;background:transparent url({{ nextBg }}) center/100% 100%;color:{{ nextColor }};display:flex;align-items:center;justify-content:center;gap:16px;font-size:25px;font-weight:700;white-space:nowrap;cursor:pointer;pointer-events:{{ nextPe }};transition:filter .14s,transform .14s ease-out" style-hover="filter:brightness(1.15);transform:translateY(-2px)" style-active="transform:translateY(3px)"><img src="{{ nextIcon }}" alt="" style="width:30px;height:30px;filter:brightness(1.5)"><span style="display:flex;flex-direction:column;align-items:flex-start;line-height:1.15"><span>До основної гри</span><span style="font-size:15px;font-weight:400;opacity:.85">{{ nextSub }}</span></span></button>
 </sc-if>
 <sc-if value="{{ isMain }}" hint-placeholder-val="{{ false }}">
-<button type="button" onClick="{{ onSkip }}" style="flex:1;border:0;padding:8px 20px 16px;background:transparent url(assets/buttons/danger-normal.svg) center/100% 100%;color:#ffe9ec;display:flex;align-items:center;justify-content:center;gap:16px;font-size:25px;font-weight:700;white-space:nowrap;cursor:pointer" style-hover="background-image:url(assets/buttons/danger-hover.svg)" style-active="background-image:url(assets/buttons/danger-pressed.svg);padding-top:14px;padding-bottom:10px"><img src="assets/icons/skip.svg" alt="" style="width:30px;height:30px;filter:brightness(1.5)"><span>Пропустити рівень</span></button>
+<button type="button" onClick="{{ onSkip }}" style="flex:1;border:0;padding:8px 20px 16px;background:transparent url(assets/buttons/danger-normal.svg) center/100% 100%;color:#ffe9ec;display:flex;align-items:center;justify-content:center;gap:16px;font-size:25px;font-weight:700;white-space:nowrap;cursor:pointer;transition:transform .14s ease-out,filter .14s" style-hover="background-image:url(assets/buttons/danger-hover.svg);transform:translateY(-2px)" style-active="background-image:url(assets/buttons/danger-pressed.svg);padding-top:14px;padding-bottom:10px"><img src="assets/icons/skip.svg" alt="" style="width:30px;height:30px;filter:brightness(1.5)"><span>Пропустити рівень</span></button>
+<button type="button" onClick="{{ onSurrender }}" style="flex:1;border:0;padding:8px 20px 16px;background:transparent url(assets/buttons/neutral-normal.svg) center/100% 100%;color:#ffd9df;display:flex;align-items:center;justify-content:center;gap:16px;font-size:25px;font-weight:700;white-space:nowrap;cursor:pointer;transition:transform .14s ease-out,filter .14s" style-hover="background-image:url(assets/buttons/neutral-hover.svg);transform:translateY(-2px)" style-active="background-image:url(assets/buttons/neutral-pressed.svg);padding-top:14px;padding-bottom:10px"><img src="assets/icons/error.svg" alt="" style="width:30px;height:30px;filter:brightness(1.5)"><span>Здатися</span></button>
 </sc-if>
 </div>
 </div>
@@ -284,9 +304,9 @@ h1,h2,h3,p{margin:0}
 </div>
 
 <div style="display:flex;gap:20px;height:88px;margin-top:14px">
-<button type="button" onClick="{{ onHome }}" style="flex:1;border:0;padding:8px 20px 16px;background:transparent url(assets/buttons/neutral-normal.svg) center/100% 100%;color:#ecf8ff;display:flex;align-items:center;justify-content:center;gap:16px;font-size:23px;font-weight:700;white-space:nowrap;cursor:pointer" style-hover="background-image:url(assets/buttons/neutral-hover.svg)" style-active="background-image:url(assets/buttons/neutral-pressed.svg);padding-top:14px;padding-bottom:10px"><img src="assets/icons/home.svg" alt="" style="width:30px;height:30px;filter:brightness(1.5)"><span>На головну</span></button>
-<button type="button" onClick="{{ onReplay }}" style="flex:1;border:0;padding:8px 20px 16px;background:transparent url(assets/buttons/primary-normal.svg) center/100% 100%;color:#ecf8ff;display:flex;align-items:center;justify-content:center;gap:16px;font-size:23px;font-weight:700;white-space:nowrap;cursor:pointer" style-hover="background-image:url(assets/buttons/primary-hover.svg)" style-active="background-image:url(assets/buttons/primary-pressed.svg);padding-top:14px;padding-bottom:10px"><img src="assets/icons/reset.svg" alt="" style="width:30px;height:30px;filter:brightness(1.5)"><span>Пройти ще раз</span></button>
-<button type="button" onClick="{{ onExport }}" disabled="{{ exporting }}" style="flex:1;border:0;padding:8px 20px 16px;background:transparent url(assets/buttons/primary-normal.svg) center/100% 100%;color:#ecf8ff;display:flex;align-items:center;justify-content:center;gap:16px;font-size:23px;font-weight:700;white-space:nowrap;cursor:pointer" style-hover="background-image:url(assets/buttons/primary-hover.svg)" style-active="background-image:url(assets/buttons/primary-pressed.svg);padding-top:14px;padding-bottom:10px"><img src="assets/icons/download.svg" alt="" style="width:30px;height:30px;filter:brightness(1.5)"><span>{{ exportLabel }}</span></button>
+<button type="button" onClick="{{ onHome }}" style="flex:1;border:0;padding:8px 20px 16px;background:transparent url(assets/buttons/neutral-normal.svg) center/100% 100%;color:#ecf8ff;display:flex;align-items:center;justify-content:center;gap:16px;font-size:23px;font-weight:700;white-space:nowrap;cursor:pointer;transition:transform .14s ease-out,filter .14s" style-hover="background-image:url(assets/buttons/neutral-hover.svg);transform:translateY(-2px)" style-active="background-image:url(assets/buttons/neutral-pressed.svg);padding-top:14px;padding-bottom:10px"><img src="assets/icons/home.svg" alt="" style="width:30px;height:30px;filter:brightness(1.5)"><span>Головна</span></button>
+<button type="button" onClick="{{ onReplay }}" style="flex:1;border:0;padding:8px 20px 16px;background:transparent url(assets/buttons/primary-normal.svg) center/100% 100%;color:#ecf8ff;display:flex;align-items:center;justify-content:center;gap:16px;font-size:23px;font-weight:700;white-space:nowrap;cursor:pointer;transition:transform .14s ease-out,filter .14s" style-hover="background-image:url(assets/buttons/primary-hover.svg);transform:translateY(-2px)" style-active="background-image:url(assets/buttons/primary-pressed.svg);padding-top:14px;padding-bottom:10px"><img src="assets/icons/reset.svg" alt="" style="width:30px;height:30px;filter:brightness(1.5)"><span>Пройти ще раз</span></button>
+<button type="button" onClick="{{ onExport }}" disabled="{{ exporting }}" style="flex:1;border:0;padding:8px 20px 16px;background:transparent url(assets/buttons/primary-normal.svg) center/100% 100%;color:#ecf8ff;display:flex;align-items:center;justify-content:center;gap:16px;font-size:23px;font-weight:700;white-space:nowrap;cursor:pointer;transition:transform .14s ease-out,filter .14s" style-hover="background-image:url(assets/buttons/primary-hover.svg);transform:translateY(-2px)" style-active="background-image:url(assets/buttons/primary-pressed.svg);padding-top:14px;padding-bottom:10px"><img src="assets/icons/download.svg" alt="" style="width:30px;height:30px;filter:brightness(1.5)"><span>{{ exportLabel }}</span></button>
 </div>
 </div>
 </sc-if>
@@ -300,7 +320,8 @@ h1,h2,h3,p{margin:0}
 <img src="assets/monitor/sticker-2.svg" alt="" style="position:absolute;width:65px;height:76px;z-index:5;pointer-events:none;filter:drop-shadow(3px 5px 3px #0009);top:455px;right:15px;transform:rotate(9deg)">
 <img src="assets/monitor/sticker-3.svg" alt="" style="position:absolute;width:65px;height:76px;z-index:5;pointer-events:none;filter:drop-shadow(3px 5px 3px #0009);top:515px;left:15px;transform:rotate(-3deg)">
 
-<button type="button" onClick="{{ onToggleSound }}" aria-pressed="{{ sound }}" title="Увімкнути або вимкнути звук" style="position:absolute;left:400px;top:992px;z-index:5;height:46px;padding:0 20px 6px;border:0;background:transparent url(assets/buttons/neutral-normal.svg) center/100% 100%;color:{{ soundColor }};font-size:17px;font-weight:700;letter-spacing:.05em;cursor:pointer;white-space:nowrap" style-hover="filter:brightness(1.2)">{{ soundLabel }}</button>
+<button type="button" onClick="{{ onToggleSound }}" aria-pressed="{{ sound }}" title="Увімкнути або вимкнути звук" style="position:absolute;left:1290px;top:1010px;width:210px;z-index:5;height:42px;padding:0 16px 5px;display:flex;align-items:center;justify-content:center;border:0;background:transparent url(assets/buttons/neutral-normal.svg) center/100% 100%;color:{{ soundColor }};font-size:17px;font-weight:700;letter-spacing:.05em;cursor:pointer;white-space:nowrap;transition:transform .14s ease-out,filter .14s" style-hover="filter:brightness(1.2);transform:translateY(-2px)">{{ soundLabel }}</button>
+<div style="position:absolute;left:96px;top:1012px;z-index:5;font-size:14px;line-height:1.45;color:#ece4d3;text-shadow:0 1px 0 #000,0 0 5px #000c;letter-spacing:.02em;pointer-events:none;white-space:nowrap">ВСП «Ірпінський фаховий коледж НУБіП України»<br>Етап Captcha AI - Вʼюник А.В.</div>
 
 <sc-if value="{{ showModal }}" hint-placeholder-val="{{ false }}">
 <div ref="{{ overlayRef }}" style="position:absolute;inset:0;z-index:6;display:flex;align-items:center;justify-content:center;background:rgba(1,5,12,.78);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px)">
@@ -317,7 +338,7 @@ h1,h2,h3,p{margin:0}
 </div>
 </div>
 </div>
-<button type="button" onClick="{{ onModalPrimary }}" style="height:80px;width:70%;margin:auto auto 0;border:0;padding:8px 20px 16px;background:transparent url({{ m.primaryBg }}) center/100% 100%;color:#ecf8ff;display:flex;align-items:center;justify-content:center;gap:16px;font-size:27px;font-weight:700;letter-spacing:.04em;white-space:nowrap;cursor:pointer;transition:filter .14s" style-hover="filter:brightness(1.15)" style-active="transform:translateY(3px)"><img src="assets/icons/next.svg" alt="" style="width:30px;height:30px;filter:brightness(1.5)"><span>{{ m.primary }}</span></button>
+<button type="button" onClick="{{ onModalPrimary }}" style="height:80px;width:70%;margin:auto auto 0;border:0;padding:8px 20px 16px;background:transparent url({{ m.primaryBg }}) center/100% 100%;color:#ecf8ff;display:flex;align-items:center;justify-content:center;gap:16px;font-size:27px;font-weight:700;letter-spacing:.04em;white-space:nowrap;cursor:pointer;transition:filter .14s,transform .14s ease-out" style-hover="filter:brightness(1.15);transform:translateY(-2px)" style-active="transform:translateY(3px)"><img src="assets/icons/next.svg" alt="" style="width:30px;height:30px;filter:brightness(1.5)"><span>{{ m.primary }}</span></button>
 </section>
 </sc-if>
 <sc-if value="{{ m.confirm }}" hint-placeholder-val="{{ false }}">
@@ -331,8 +352,8 @@ h1,h2,h3,p{margin:0}
 </div>
 </div>
 <div style="display:flex;gap:18px">
-<button type="button" onClick="{{ onModalSecondary }}" style="flex:1;height:70px;border:0;padding:8px 20px 16px;background:transparent url(assets/buttons/neutral-normal.svg) center/100% 100%;color:#ecf8ff;display:flex;align-items:center;justify-content:center;gap:14px;font-size:22px;font-weight:700;white-space:nowrap;cursor:pointer" style-hover="background-image:url(assets/buttons/neutral-hover.svg)" style-active="background-image:url(assets/buttons/neutral-pressed.svg);padding-top:14px;padding-bottom:10px"><img src="assets/icons/undo.svg" alt="" style="width:26px;height:26px;filter:brightness(1.5)"><span>{{ m.secondary }}</span></button>
-<button type="button" onClick="{{ onModalPrimary }}" style="flex:1;height:70px;border:0;padding:8px 20px 16px;background:transparent url({{ m.primaryBg }}) center/100% 100%;color:#ffffff;display:flex;align-items:center;justify-content:center;gap:14px;font-size:22px;font-weight:700;white-space:nowrap;cursor:pointer;transition:filter .14s" style-hover="filter:brightness(1.15)" style-active="transform:translateY(3px)"><img src="{{ m.primaryIcon }}" alt="" style="width:26px;height:26px;filter:brightness(1.5)"><span>{{ m.primary }}</span></button>
+<button type="button" onClick="{{ onModalSecondary }}" style="flex:1;height:70px;border:0;padding:8px 20px 16px;background:transparent url(assets/buttons/neutral-normal.svg) center/100% 100%;color:#ecf8ff;display:flex;align-items:center;justify-content:center;gap:14px;font-size:22px;font-weight:700;white-space:nowrap;cursor:pointer;transition:transform .14s ease-out,filter .14s" style-hover="background-image:url(assets/buttons/neutral-hover.svg);transform:translateY(-2px)" style-active="background-image:url(assets/buttons/neutral-pressed.svg);padding-top:14px;padding-bottom:10px"><img src="assets/icons/undo.svg" alt="" style="width:26px;height:26px;filter:brightness(1.5)"><span>{{ m.secondary }}</span></button>
+<button type="button" onClick="{{ onModalPrimary }}" style="flex:1;height:70px;border:0;padding:8px 20px 16px;background:transparent url({{ m.primaryBg }}) center/100% 100%;color:#ffffff;display:flex;align-items:center;justify-content:center;gap:14px;font-size:22px;font-weight:700;white-space:nowrap;cursor:pointer;transition:filter .14s,transform .14s ease-out" style-hover="filter:brightness(1.15);transform:translateY(-2px)" style-active="transform:translateY(3px)"><img src="{{ m.primaryIcon }}" alt="" style="width:26px;height:26px;filter:brightness(1.5)"><span>{{ m.primary }}</span></button>
 </div>
 </section>
 </sc-if>
@@ -345,18 +366,33 @@ h1,h2,h3,p{margin:0}
 <script type="text/x-dc" data-dc-script data-props="{&quot;targetMarks&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Підказки&quot;}}">
 // Інтерфейс гри. Уся ігрова логіка — у модулях game/*.js (див. README.md).
 class Component extends DCLogic {
-  state = { g: null, s: null, now: Date.now(), scale: 1, teamDraft: '', teamError: '', sound: true, holdUntil: 0, bonusCount: 25, exporting: false, exportMsg: '', exportOk: true, loadError: '' };
+  state = { g: null, s: null, now: Date.now(), scale: 1, teamDraft: '', teamError: '', sound: true, holdUntil: 0, bonusCount: 25, exporting: false, exportMsg: '', exportOk: true, loadError: '', hoverIdx: null };
   stageRef = React.createRef(); boardRef = React.createRef(); scoreRef = React.createRef(); msgRef = React.createRef(); mascotRef = React.createRef();
-  modalRef = React.createRef(); overlayRef = React.createRef(); burstRef = React.createRef(); resultMascotRef = React.createRef();
+  screenRef = React.createRef(); modalRef = React.createRef(); overlayRef = React.createRef(); burstRef = React.createRef(); resultMascotRef = React.createRef();
   lockUntil = 0;
 
   componentDidMount() {
     this.rm = !!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
-    this.onResize = () => this.setState({ scale: Math.min(window.innerWidth / 1920, window.innerHeight / 1080) });
+    // Масштаб полотна 1920×1080. Нульовий розмір (вкладка ще не показана) ігнорується й перевіряється знову.
+    this.onResize = () => {
+      const w = window.innerWidth || document.documentElement.clientWidth;
+      const h = window.innerHeight || document.documentElement.clientHeight;
+      if (!w || !h) { cancelAnimationFrame(this.resizeRaf); this.resizeRaf = requestAnimationFrame(this.onResize); return; }
+      const scale = Math.min(w / 1920, h / 1080);
+      if (scale !== this.state.scale) this.setState({ scale });
+    };
     window.addEventListener('resize', this.onResize);
+    if (window.ResizeObserver) { this.ro = new ResizeObserver(() => this.onResize()); this.ro.observe(document.documentElement); }
     this.onResize();
     this.onKey = (e) => this.handleKey(e);
     window.addEventListener('keydown', this.onKey);
+    // Анімація натискання для всіх кнопок інтерфейсу (крім клавіш поля — у них своя).
+    this.onBtnDown = (e) => {
+      const b = e.target && e.target.closest && e.target.closest('button');
+      if (!b || b.disabled || b.hasAttribute('data-key-idx')) return;
+      this.anim(b, [{ transform: 'translateY(0) scale(1)' }, { transform: 'translateY(1px) scale(.975)' }, { transform: 'translateY(0) scale(1)' }], { duration: 180, easing: 'cubic-bezier(.3,.7,.4,1)' });
+    };
+    document.addEventListener('pointerdown', this.onBtnDown, true);
     this.onVis = () => this.tick();
     document.addEventListener('visibilitychange', this.onVis);
     import(new URL('game/index.js', document.baseURI).href).then((g) => {
@@ -375,8 +411,11 @@ class Component extends DCLogic {
     clearInterval(this.interval);
     clearTimeout(this.autoTimer);
     window.removeEventListener('resize', this.onResize);
+    if (this.ro) this.ro.disconnect();
+    cancelAnimationFrame(this.resizeRaf);
     window.removeEventListener('keydown', this.onKey);
     document.removeEventListener('visibilitychange', this.onVis);
+    document.removeEventListener('pointerdown', this.onBtnDown, true);
   }
 
   visibleModal(st) {
@@ -399,6 +438,31 @@ class Component extends DCLogic {
       this.anim(this.scoreRef.current, [{ transform: 'scale(1)' }, { transform: 'scale(1.12)', filter: 'brightness(1.6)' }, { transform: 'scale(1)' }], { duration: 500 });
     }
     if (s && s.stage === 'results' && (!ps || ps.stage !== 'results' || !prev.g)) this.onResultsShown();
+    if (s && ps && s.stage !== ps.stage) this.screenIn();
+    if (s && ps && s.stage === 'main' && ps.stage === 'main' && ps.current !== s.current) requestAnimationFrame(() => this.boardIn());
+    else if (this.resetFlash) { this.resetFlash = false; requestAnimationFrame(() => this.boardIn(true)); }
+  }
+
+  /** Перехід між екранами: «увімкнення» CRT-екрана. */
+  screenIn() {
+    this.anim(this.screenRef.current, [
+      { opacity: 0, transform: 'scale(.985)' },
+      { opacity: 1, transform: 'scale(1)' },
+    ], { duration: 380, easing: 'cubic-bezier(.2,.8,.2,1)' });
+    requestAnimationFrame(() => this.boardIn());
+  }
+
+  /** Поява поля (нового рівня або після скидання): клавіші з'являються хвилею від кута. */
+  boardIn(quick = false) {
+    const els = this.keyEls();
+    const n = Math.round(Math.sqrt(els.length)) || 1;
+    els.forEach((el, i) => {
+      const d = (Math.floor(i / n) + (i % n)) * (quick ? 20 : 32);
+      this.anim(el, quick
+        ? [{ opacity: 1 }, { opacity: 0.55 }, { opacity: 1 }]
+        : [{ opacity: 0, transform: 'translateY(8px) scale(.92)' }, { opacity: 1, transform: 'none' }],
+      { duration: quick ? 300 : 340, delay: d, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'backwards' });
+    });
   }
 
   anim(el, frames, opts) {
@@ -499,7 +563,7 @@ class Component extends DCLogic {
     if (this.rm) return;
     const { anim } = this.state.g.CONFIG;
     this.keyEls().forEach((el, i) => {
-      this.anim(el, [{ filter: 'brightness(1)' }, { filter: 'brightness(1.7) drop-shadow(0 0 16px #36efa6)' }, { filter: 'brightness(1)' }], { duration: anim.success, delay: i * anim.successStagger, easing: 'ease-out' });
+      this.anim(el, [{ transform: 'scale(1)' }, { transform: 'scale(1.06)' }, { transform: 'scale(1)' }], { duration: anim.success, delay: i * anim.successStagger, easing: 'ease-out' });
     });
   }
 
@@ -540,6 +604,9 @@ class Component extends DCLogic {
     const affected = g.puzzle.affected(ab.n, idx);
     requestAnimationFrame(() => {
       this.pulse(affected);
+      const els = this.keyEls();
+      this.anim(els[idx], [{ transform: 'scale(1)' }, { transform: 'scale(.93)', offset: 0.3 }, { transform: 'scale(1.02)', offset: 0.72 }, { transform: 'scale(1)' }], { duration: 300, easing: 'cubic-bezier(.3,.7,.4,1)' });
+      affected.slice(1).forEach((j) => this.anim(els[j], [{ transform: 'scale(1)' }, { transform: 'scale(.97)', offset: 0.4 }, { transform: 'scale(1)' }], { duration: 260, delay: 60, easing: 'ease-out' }));
       if (r.result === 'solved') this.sweep();
     });
   }
@@ -559,7 +626,7 @@ class Component extends DCLogic {
   doReset() {
     const { g, s } = this.state;
     if (!g || !s) return;
-    if (s.stage === 'training') { g.sfx.reset(); this.commit(g.state.resetLevel(s, Date.now())); return; }
+    if (s.stage === 'training') { g.sfx.reset(); this.resetFlash = true; this.commit(g.state.resetLevel(s, Date.now())); return; }
     if (s.stage === 'main') {
       const ab = g.state.activeBoard(s);
       if (!ab || s.modal || ab.rec.status === 'solved') return;
@@ -577,10 +644,11 @@ class Component extends DCLogic {
       case 'success': g.sfx.ui(); this.commit(st.advance(s, now)); break;
       case 'returnDeferred': g.sfx.ui(); this.commit(st.closeModal(s, now)); break;
       case 'timeout': clearTimeout(this.autoTimer); this.commit(st.toResults(s)); break;
-      case 'confirmReset': g.sfx.reset(); this.commit(st.resetLevel(s, now)); break;
+      case 'confirmReset': g.sfx.reset(); this.resetFlash = true; this.commit(st.resetLevel(s, now)); break;
       case 'confirmSkip': g.sfx.ui(); this.commit(st.confirmSkip(s, now)); break;
       case 'confirmFinish': g.sfx.ui(); this.commit(st.finishEarly(s, now)); break;
-      case 'confirmHome': g.storage.clearSession(); this.commit(st.createIntro(s.team), { teamDraft: s.team || '', teamError: '', exportMsg: '' }); break;
+      case 'confirmSurrender': g.sfx.error(); this.commit(st.surrender(s, now)); break;
+      case 'confirmHome': g.storage.clearSession(); this.commit(st.createIntro(''), { teamDraft: '', teamError: '', exportMsg: '' }); break;
       case 'confirmReplay': g.storage.clearSession(); this.commit(st.startTraining(s.team), { exportMsg: '' }); break;
       default: this.commit(st.closeModal(s, now));
     }
@@ -649,13 +717,16 @@ class Component extends DCLogic {
       disabled: ['#617084', 'none'],
       inactive: ['#9babc4', 'none'],
     }[st];
-    return { src: 'assets/keycaps/' + st + '.svg', color: look[0], shadow: look[1], letter };
+    // Два шари: основа + «світло» з плавним переходом прозорості.
+    const baseSrc = 'assets/keycaps/' + (mode === 'locked' && !v ? 'disabled' : 'inactive') + '.svg';
+    const litSrc = 'assets/keycaps/' + (mode === 'success' ? 'success' : 'active') + '.svg';
+    return { src: 'assets/keycaps/' + st + '.svg', baseSrc, litSrc, litOpacity: v ? 1 : 0, color: look[0], shadow: look[1], letter };
   }
 
   renderVals() {
     const { g, s, now, scale } = this.state;
     const base = {
-      stageRef: this.stageRef, boardRef: this.boardRef, scoreRef: this.scoreRef, msgRef: this.msgRef, mascotRef: this.mascotRef,
+      stageRef: this.stageRef, screenRef: this.screenRef, boardRef: this.boardRef, scoreRef: this.scoreRef, msgRef: this.msgRef, mascotRef: this.mascotRef,
       modalRef: this.modalRef, overlayRef: this.overlayRef, burstRef: this.burstRef, resultMascotRef: this.resultMascotRef,
       scale, notReady: !g || !s, loadText: this.state.loadError || 'Завантаження системи перевірки…',
       soundLabel: this.state.sound ? 'ЗВУК: УВІМК.' : 'ЗВУК: ВИМК.', soundColor: this.state.sound ? '#d9f3ff' : '#8aa0b5', sound: this.state.sound,
@@ -709,9 +780,21 @@ class Component extends DCLogic {
       vals.matchColor = matched === n * n ? '#36efa6' : '#ffd56d';
       vals.boardCols = `repeat(${n}, 1fr)`;
       vals.boardGap = (565 / n * 0.04).toFixed(1) + 'px';
+      // Підказка при наведенні: які клавіші зміняться і як (засвітяться / згаснуть).
+      const hv = this.state.hoverIdx;
+      const canPreview = hv != null && hv < n * n && !locked && !exhausted;
+      const pv = new Set(canPreview ? g.puzzle.affected(n, hv) : []);
       vals.keys = rec.board.map((v, i) => {
         const L = g.puzzle.LETTERS[i];
+        const willOn = !v;
+        const inPv = pv.has(i);
         return {
+          pvOpacity: inPv ? (i === hv ? 1 : 0.85) : 0,
+          pvBg: willOn ? 'rgba(90,225,255,.22)' : 'rgba(2,8,18,.5)',
+          pvDot: willOn ? '#8ff4ff' : '#ffb35c',
+          pvDotGlow: willOn ? '0 0 8px #26d9ff' : '0 0 6px #ff9a2e',
+          onHover: () => { if (this.state.hoverIdx !== i) this.setState({ hoverIdx: i }); },
+          onLeave: () => { if (this.state.hoverIdx === i) this.setState({ hoverIdx: null }); },
           ...this.keycap(v, L, mode), idx: i, fs, on: !!v, disabled: locked,
           mark: marks, markBg: tgt[i] ? '#7ff3ff' : 'transparent', markBorder: tgt[i] ? '#d8fdff' : '#6d86a2', markShadow: tgt[i] ? '0 0 8px #26d9ff' : 'none',
           cursor: locked || exhausted ? 'not-allowed' : 'pointer',
@@ -764,6 +847,7 @@ class Component extends DCLogic {
           return { border: '#1cbfff', bg: 'transparent', shadow: 'none' };
         });
         vals.progressAria = 'Пройдено рівнів: ' + g.scoring.solvedCount(s.levels) + ' з 4';
+        vals.onSurrender = () => { const st = this.state.s; if (st.modal) return; g.sfx.ui(); this.commit(g.state.openModal(st, 'confirmSurrender', Date.now())); };
         vals.onSkip = () => { const st = this.state.s; if (st.modal) return; g.sfx.ui(); this.commit(g.state.requestSkip(st, Date.now())); };
       }
     }
@@ -824,7 +908,7 @@ class Component extends DCLogic {
       m.bonusSize = '38px';
     } else {
       m.primaryBg = kind === 'confirmReset' || kind === 'confirmSkip' ? 'assets/buttons/warning-normal.svg' : 'assets/buttons/danger-normal.svg';
-      m.primaryIcon = kind === 'confirmReset' ? 'assets/icons/reset.svg' : kind === 'confirmSkip' ? 'assets/icons/skip.svg' : kind === 'confirmFinish' ? 'assets/icons/check.svg' : kind === 'confirmHome' ? 'assets/icons/home.svg' : 'assets/icons/reset.svg';
+      m.primaryIcon = kind === 'confirmSurrender' ? 'assets/icons/error.svg' : kind === 'confirmReset' ? 'assets/icons/reset.svg' : kind === 'confirmSkip' ? 'assets/icons/skip.svg' : kind === 'confirmFinish' ? 'assets/icons/check.svg' : kind === 'confirmHome' ? 'assets/icons/home.svg' : 'assets/icons/reset.svg';
     }
     return m;
   }

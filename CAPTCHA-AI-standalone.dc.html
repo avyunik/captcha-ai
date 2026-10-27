@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./vendor/react.production.min.js"></script>
+<script src="./vendor/react-dom.production.min.js"></script>
+<script src="./support.js"></script>
+<script src="./game/standalone-bundle.js"></script>
+<meta name="ext-resource-dependency" content="./assets/backgrounds/crt-screen.svg" data-resource-id="a_backgrounds_crt_screen_svg">
+<meta name="ext-resource-dependency" content="./assets/backgrounds/workshop.png" data-resource-id="a_backgrounds_workshop_png">
+<meta name="ext-resource-dependency" content="./assets/buttons/danger-disabled.svg" data-resource-id="a_buttons_danger_disabled_svg">
+<meta name="ext-resource-dependency" content="./assets/buttons/danger-hover.svg" data-resource-id="a_buttons_danger_hover_svg">
+<meta name="ext-resource-dependency" content="./assets/buttons/danger-normal.svg" data-resource-id="a_buttons_danger_normal_svg">
+<meta name="ext-resource-dependency" content="./assets/buttons/danger-pressed.svg" data-resource-id="a_buttons_danger_pressed_svg">
+<meta name="ext-resource-dependency" content="./assets/buttons/disabled-disabled.svg" data-resource-id="a_buttons_disabled_disabled_svg">
+<meta name="ext-resource-dependency" content="./assets/buttons/disabled-hover.svg" data-resource-id="a_buttons_disabled_hover_svg">
+<meta name="ext-resource-dependency" content="./assets/buttons/disabled-normal.svg" data-resource-id="a_buttons_disabled_normal_svg">
+<meta name="ext-resource-dependency" content="./assets/buttons/disabled-pressed.svg" data-resource-id="a_buttons_disabled_pressed_svg">
+<meta name="ext-resource-dependency" content="./assets/buttons/neutral-disabled.svg" data-resource-id="a_buttons_neutral_disabled_svg">
+<meta name="ext-resource-dependency" content="./assets/buttons/neutral-hover.svg" data-resource-id="a_buttons_neutral_hover_svg">
+<meta name="ext-resource-dependency" content="./assets/buttons/neutral-normal.svg" data-resource-id="a_buttons_neutral_normal_svg">
+<meta name="ext-resource-dependency" content="./assets/buttons/neutral-pressed.svg" data-resource-id="a_buttons_neutral_pressed_svg">
+<meta name="ext-resource-dependency" content="./assets/buttons/primary-disabled.svg" data-resource-id="a_buttons_primary_disabled_svg">
+<meta name="ext-resource-dependency" content="./assets/buttons/primary-hover.svg" data-resource-id="a_buttons_primary_hover_svg">
+<meta name="ext-resource-dependency" content="./assets/buttons/primary-normal.svg" data-resource-id="a_buttons_primary_normal_svg">
+<meta name="ext-resource-dependency" content="./assets/buttons/primary-pressed.svg" data-resource-id="a_buttons_primary_pressed_svg">
+<meta name="ext-resource-dependency" content="./assets/buttons/success-disabled.svg" data-resource-id="a_buttons_success_disabled_svg">
+<meta name="ext-resource-dependency" content="./assets/buttons/success-hover.svg" data-resource-id="a_buttons_success_hover_svg">
+<meta name="ext-resource-dependency" content="./assets/buttons/success-normal.svg" data-resource-id="a_buttons_success_normal_svg">
+<meta name="ext-resource-dependency" content="./assets/buttons/success-pressed.svg" data-resource-id="a_buttons_success_pressed_svg">
+<meta name="ext-resource-dependency" content="./assets/buttons/warning-disabled.svg" data-resource-id="a_buttons_warning_disabled_svg">
+<meta name="ext-resource-dependency" content="./assets/buttons/warning-hover.svg" data-resource-id="a_buttons_warning_hover_svg">
+<meta name="ext-resource-dependency" content="./assets/buttons/warning-normal.svg" data-resource-id="a_buttons_warning_normal_svg">
+<meta name="ext-resource-dependency" content="./assets/buttons/warning-pressed.svg" data-resource-id="a_buttons_warning_pressed_svg">
+<meta name="ext-resource-dependency" content="./assets/comics/speech.svg" data-resource-id="a_comics_speech_svg">
+<meta name="ext-resource-dependency" content="./assets/comics/students.png" data-resource-id="a_comics_students_png">
+<meta name="ext-resource-dependency" content="./assets/effects/dim.svg" data-resource-id="a_effects_dim_svg">
+<meta name="ext-resource-dependency" content="./assets/effects/key-pulse.svg" data-resource-id="a_effects_key_pulse_svg">
+<meta name="ext-resource-dependency" content="./assets/effects/scanlines.svg" data-resource-id="a_effects_scanlines_svg">
+<meta name="ext-resource-dependency" content="./assets/effects/success-burst.svg" data-resource-id="a_effects_success_burst_svg">
+<meta name="ext-resource-dependency" content="./assets/icons/check.svg" data-resource-id="a_icons_check_svg">
+<meta name="ext-resource-dependency" content="./assets/icons/download.svg" data-resource-id="a_icons_download_svg">
+<meta name="ext-resource-dependency" content="./assets/icons/error.svg" data-resource-id="a_icons_error_svg">
+<meta name="ext-resource-dependency" content="./assets/icons/grid.svg" data-resource-id="a_icons_grid_svg">
+<meta name="ext-resource-dependency" content="./assets/icons/home.svg" data-resource-id="a_icons_home_svg">
+<meta name="ext-resource-dependency" content="./assets/icons/next.svg" data-resource-id="a_icons_next_svg">
+<meta name="ext-resource-dependency" content="./assets/icons/reset.svg" data-resource-id="a_icons_reset_svg">
+<meta name="ext-resource-dependency" content="./assets/icons/robot.svg" data-resource-id="a_icons_robot_svg">
+<meta name="ext-resource-dependency" content="./assets/icons/skip.svg" data-resource-id="a_icons_skip_svg">
+<meta name="ext-resource-dependency" content="./assets/icons/timer.svg" data-resource-id="a_icons_timer_svg">
+<meta name="ext-resource-dependency" content="./assets/icons/trophy.svg" data-resource-id="a_icons_trophy_svg">
+<meta name="ext-resource-dependency" content="./assets/icons/undo.svg" data-resource-id="a_icons_undo_svg">
+<meta name="ext-resource-dependency" content="./assets/icons/users.svg" data-resource-id="a_icons_users_svg">
+<meta name="ext-resource-dependency" content="./assets/icons/warning.svg" data-resource-id="a_icons_warning_svg">
+<meta name="ext-resource-dependency" content="./assets/keycaps/active.svg" data-resource-id="a_keycaps_active_svg">
+<meta name="ext-resource-dependency" content="./assets/keycaps/disabled.svg" data-resource-id="a_keycaps_disabled_svg">
+<meta name="ext-resource-dependency" content="./assets/keycaps/hover.svg" data-resource-id="a_keycaps_hover_svg">
+<meta name="ext-resource-dependency" content="./assets/keycaps/inactive.svg" data-resource-id="a_keycaps_inactive_svg">
+<meta name="ext-resource-dependency" content="./assets/keycaps/light-blue.svg" data-resource-id="a_keycaps_light_blue_svg">
+<meta name="ext-resource-dependency" content="./assets/keycaps/light-green.svg" data-resource-id="a_keycaps_light_green_svg">
+<meta name="ext-resource-dependency" content="./assets/keycaps/pressed.svg" data-resource-id="a_keycaps_pressed_svg">
+<meta name="ext-resource-dependency" content="./assets/keycaps/success.svg" data-resource-id="a_keycaps_success_svg">
+<meta name="ext-resource-dependency" content="./assets/keycaps/toggled.svg" data-resource-id="a_keycaps_toggled_svg">
+<meta name="ext-resource-dependency" content="./assets/mascot/access_denied.png" data-resource-id="a_mascot_access_denied_png">
+<meta name="ext-resource-dependency" content="./assets/mascot/celebrating.png" data-resource-id="a_mascot_celebrating_png">
+<meta name="ext-resource-dependency" content="./assets/mascot/disappointed.png" data-resource-id="a_mascot_disappointed_png">
+<meta name="ext-resource-dependency" content="./assets/mascot/explaining.png" data-resource-id="a_mascot_explaining_png">
+<meta name="ext-resource-dependency" content="./assets/mascot/friendly.png" data-resource-id="a_mascot_friendly_png">
+<meta name="ext-resource-dependency" content="./assets/mascot/hud-pixel.svg" data-resource-id="a_mascot_hud_pixel_svg">
+<meta name="ext-resource-dependency" content="./assets/mascot/human_confirmed.png" data-resource-id="a_mascot_human_confirmed_png">
+<meta name="ext-resource-dependency" content="./assets/mascot/neutral.png" data-resource-id="a_mascot_neutral_png">
+<meta name="ext-resource-dependency" content="./assets/mascot/skeptical.png" data-resource-id="a_mascot_skeptical_png">
+<meta name="ext-resource-dependency" content="./assets/mascot/surprised.png" data-resource-id="a_mascot_surprised_png">
+<meta name="ext-resource-dependency" content="./assets/mascot/thinking.png" data-resource-id="a_mascot_thinking_png">
+<meta name="ext-resource-dependency" content="./assets/monitor/crt-frame.svg" data-resource-id="a_monitor_crt_frame_svg">
+<meta name="ext-resource-dependency" content="./assets/monitor/glass.svg" data-resource-id="a_monitor_glass_svg">
+<meta name="ext-resource-dependency" content="./assets/monitor/sticker-1.svg" data-resource-id="a_monitor_sticker_1_svg">
+<meta name="ext-resource-dependency" content="./assets/monitor/sticker-2.svg" data-resource-id="a_monitor_sticker_2_svg">
+<meta name="ext-resource-dependency" content="./assets/monitor/sticker-3.svg" data-resource-id="a_monitor_sticker_3_svg">
+<meta name="ext-resource-dependency" content="./assets/panels/current-move.svg" data-resource-id="a_panels_current_move_svg">
+<meta name="ext-resource-dependency" content="./assets/panels/hud-compact.svg" data-resource-id="a_panels_hud_compact_svg">
+<meta name="ext-resource-dependency" content="./assets/panels/hud-large.svg" data-resource-id="a_panels_hud_large_svg">
+<meta name="ext-resource-dependency" content="./assets/panels/hud-medium.svg" data-resource-id="a_panels_hud_medium_svg">
+<meta name="ext-resource-dependency" content="./assets/panels/input.svg" data-resource-id="a_panels_input_svg">
+<meta name="ext-resource-dependency" content="./assets/panels/level-result.svg" data-resource-id="a_panels_level_result_svg">
+<meta name="ext-resource-dependency" content="./assets/panels/level.svg" data-resource-id="a_panels_level_svg">
+<meta name="ext-resource-dependency" content="./assets/panels/message.svg" data-resource-id="a_panels_message_svg">
+<meta name="ext-resource-dependency" content="./assets/panels/modal.svg" data-resource-id="a_panels_modal_svg">
+<meta name="ext-resource-dependency" content="./assets/panels/move-limit.svg" data-resource-id="a_panels_move_limit_svg">
+<meta name="ext-resource-dependency" content="./assets/panels/rules.svg" data-resource-id="a_panels_rules_svg">
+<meta name="ext-resource-dependency" content="./assets/panels/score.svg" data-resource-id="a_panels_score_svg">
+<meta name="ext-resource-dependency" content="./assets/panels/team.svg" data-resource-id="a_panels_team_svg">
+<meta name="ext-resource-dependency" content="./assets/panels/timer.svg" data-resource-id="a_panels_timer_svg">
+<meta name="ext-resource-dependency" content="./assets/popups/complete.svg" data-resource-id="a_popups_complete_svg">
+<meta name="ext-resource-dependency" content="./assets/popups/confirmation.svg" data-resource-id="a_popups_confirmation_svg">
+<meta name="ext-resource-dependency" content="./assets/popups/skipped.svg" data-resource-id="a_popups_skipped_svg">
+<meta name="ext-resource-dependency" content="./assets/popups/success.svg" data-resource-id="a_popups_success_svg">
+<meta name="ext-resource-dependency" content="./assets/popups/timeout.svg" data-resource-id="a_popups_timeout_svg">
+<template id="__bundler_thumbnail" data-bg-color="#03070e"><svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="120" fill="#03070e"/><rect x="34" y="34" width="52" height="52" rx="6" fill="#0a1626" stroke="#21dfff" stroke-width="3"/><g fill="#2ee6ff"><rect x="40" y="40" width="12" height="12" rx="2"/><rect x="68" y="40" width="12" height="12" rx="2"/><rect x="54" y="54" width="12" height="12" rx="2"/><rect x="40" y="68" width="12" height="12" rx="2"/><rect x="68" y="68" width="12" height="12" rx="2"/></g></svg></template>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>CAPTCHA AI — Доведи, що ти людина!</title>
+<style>
+@font-face{font-family:Terminal;src:url(assets/fonts/DejaVuSans.ttf) format('truetype');font-display:block}
+html,body{margin:0;height:100%;background:#03070e;overflow:hidden}
+*{box-sizing:border-box}
+button,input{font:inherit}
+button:focus-visible,input:focus-visible{outline:3px solid #fff;outline-offset:4px}
+a{color:#6ee9ff}a:hover{color:#bff6ff}
+h1,h2,h3,p{margin:0}
+</style>
+</helmet>
+<div style="position:fixed;inset:0;background:#03070e;overflow:hidden;font-family:Terminal,'DejaVu Sans',Arial,sans-serif;color:#e6f4ff;user-select:none;-webkit-user-select:none">
+<div ref="{{ stageRef }}" data-screen-label="{{ screenLabel }}" style="position:absolute;left:50%;top:50%;width:1920px;height:1080px;margin-left:-960px;margin-top:-540px;transform:scale({{ scale }});transform-origin:center;background:#050b14 url({{ A.a_backgrounds_workshop_png }}) center/cover;font-size:25px;line-height:1.35">
+
+<div style="position:absolute;left:100px;top:100px;width:1720px;height:870px;padding:32px 40px;background:#020a16 url({{ A.a_backgrounds_crt_screen_svg }}) center/100% 100%;border-radius:30px;overflow:hidden">
+
+<sc-if value="{{ notReady }}" hint-placeholder-val="{{ true }}">
+<div style="height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;color:#9eb7d2;font-size:28px;text-align:center">
+<img src="{{ A.a_mascot_hud_pixel_svg }}" alt="" style="width:96px;height:120px;image-rendering:pixelated">
+<div>{{ loadText }}</div>
+</div>
+</sc-if>
+
+<!-- ЕКРАН 1: ВСТУП -->
+<sc-if value="{{ isIntro }}" hint-placeholder-val="{{ false }}">
+<div style="height:100%;display:flex;flex-direction:column">
+<div style="height:100px;display:flex;align-items:center;justify-content:space-between;gap:30px">
+<div style="transform:rotate(-1deg);padding:10px 26px 12px;background:#eee8db;color:#101a2a;box-shadow:7px 6px 0 #183652">
+<h1 style="font-size:46px;text-transform:uppercase;line-height:1.05;letter-spacing:-.01em">Доведи, що ти людина!</h1>
+<div style="font-size:21px;font-weight:700;color:#1d4f86;margin-top:4px;text-transform:uppercase;letter-spacing:.02em">Капча, яку ніхто не просив</div>
+</div>
+<div style="font-size:19px;color:#7edbff;line-height:1.45;text-align:right">РЕЄСТРАЦІЯ НА СТУДЕНТСЬКИЙ КОНКУРС<br>«ЛОГІЧНІ ЛАБІРИНТИ»</div>
+</div>
+
+<div style="height:340px;display:grid;grid-template-columns:1.15fr .8fr 1fr;gap:18px;margin:16px 0 18px">
+<div style="position:relative;background:linear-gradient(145deg,#102d4c,#071321);border:3px solid #9dd9ff;overflow:hidden;transform:rotate(-.6deg);isolation:isolate">
+<img src="{{ A.a_comics_students_png }}" alt="Студентська команда біля ноутбука" draggable="false" style="position:absolute;width:100%;height:100%;object-fit:contain;object-position:bottom;bottom:-15px;left:40px">
+<div style="position:absolute;top:10px;left:14px;width:58%;height:132px;background:url({{ A.a_comics_speech_svg }}) center/100% 100%;padding:16px 20px 30px;color:#152639;font-size:19px;font-weight:700;line-height:1.35;z-index:1">Нарешті! Реєстрацію на «Логічні лабіринти» відкрито!</div>
+</div>
+<div style="position:relative;background:linear-gradient(145deg,#102d4c,#071321);border:3px solid #9dd9ff;overflow:hidden;transform:rotate(.8deg);isolation:isolate">
+<div style="position:absolute;inset:24px 22px 22px;border:3px solid #278cca;border-radius:8px;background:#d4e8f9;color:#13263e;padding:16px 20px;font-size:17px;transform:rotate(-3deg);box-shadow:9px 14px 0 #0005;display:flex;flex-direction:column;gap:8px">
+<b style="display:block;border-bottom:1px solid #6c94b9;padding-bottom:8px;font-size:18px">ТЗ для штучного інтелекту</b>
+<div style="font-style:italic;line-height:1.3">«Створити перевірку, яку не зможе пройти жоден бот»</div>
+<div style="display:flex;justify-content:space-between;gap:10px;padding:6px 9px;background:#fff8;border:1px solid #92bad9"><span>Заблоковано ботів</span><b>100%</b></div>
+<div style="display:flex;justify-content:space-between;gap:10px;padding:6px 9px;background:#fff8;border:1px solid #92bad9"><span>Зареєстровано студентів</span><b>0</b></div>
+<div style="padding:6px 9px;background:#f26a68;color:#341017;font-weight:700;text-align:center">ДОСТУП ЗАБЛОКОВАНО</div>
+</div>
+</div>
+<div style="position:relative;background:linear-gradient(145deg,#102d4c,#071321);border:3px solid #9dd9ff;overflow:hidden;transform:rotate(-.3deg);isolation:isolate">
+<img src="{{ A.a_mascot_explaining_png }}" alt="CAPTCHA AI пояснює" draggable="false" style="position:absolute;height:310px;right:-18px;bottom:-15px">
+<div style="position:absolute;top:10px;left:14px;width:60%;height:140px;background:url({{ A.a_comics_speech_svg }}) center/100% 100%;padding:16px 20px 30px;color:#152639;font-size:19px;font-weight:700;line-height:1.35;z-index:1">«Захист працює бездоганно». Навіть розробники не пройшли.</div>
+</div>
+</div>
+
+<div style="flex:1;min-height:0;display:grid;grid-template-columns:1fr 1fr;gap:24px">
+<div style="position:relative;background:url({{ A.a_panels_hud_medium_svg }}) center/100% 100%;padding:26px 34px;display:flex;flex-direction:column">
+<h3 style="font-size:28px;color:#11deee;display:flex;align-items:center;gap:15px;margin-bottom:10px"><img src="{{ A.a_icons_users_svg }}" alt="" style="width:34px;height:34px">НАЗВА КОМАНДИ</h3>
+<p style="font-size:21px;color:#c1d7ed;line-height:1.45">ШІ заблокував усіх. Доведіть системі, що ви люди, і допоможіть відновити реєстрацію.</p>
+<input value="{{ teamDraft }}" onChange="{{ onTeamChange }}" onKeyDown="{{ onTeamKey }}" maxLength="{{ teamMax }}" placeholder="Назва команди" aria-label="Назва команди" autocomplete="off" spellcheck="false" style="display:block;background:#e5eef4;border:3px solid #88cbed;border-radius:9px;color:#152338;padding:12px 18px;width:100%;font-size:28px;margin:16px 0 10px;box-shadow:0 0 18px #16aaff33;user-select:text;-webkit-user-select:text">
+<div style="font-size:17px;color:{{ teamHintColor }}">{{ teamHint }}</div>
+</div>
+<div style="position:relative;background:url({{ A.a_panels_hud_medium_svg }}) center/100% 100%;padding:26px 34px;display:flex;flex-direction:column">
+<h3 style="font-size:28px;color:#11deee;display:flex;align-items:center;gap:15px;margin-bottom:12px"><img src="{{ A.a_icons_grid_svg }}" alt="" style="width:34px;height:34px">ЯК ЦЕ ПРАЦЮЄ</h3>
+<div style="display:flex;gap:24px;align-items:center">
+<div style="width:140px;flex-shrink:0;display:grid;grid-template-columns:repeat(3,1fr);gap:3px">
+<sc-for list="{{ introKeys }}" as="k" hint-placeholder-count="9">
+<div style="position:relative;aspect-ratio:1;color:{{ k.color }};text-shadow:{{ k.shadow }}"><img src="{{ k.src }}" alt="" style="position:absolute;inset:0;width:100%;height:100%"><span style="position:absolute;inset:0;display:grid;place-items:center;transform:translateY(-3%);font-size:20px;font-weight:700">{{ k.letter }}</span></div>
+</sc-for>
+</div>
+<div style="display:flex;flex-direction:column;gap:5px;font-size:19px;color:#c1d7ed;line-height:1.35">
+<div>Клавіша перемикає себе та сусідів зверху, знизу, ліворуч і праворуч.</div>
+<div>Мета — відтворити на полі візерунок-зразок.</div>
+<div style="color:#9eb7d2">Спершу тренування: без таймера й балів.</div>
+<div style="color:#36efa6">Далі 4 рівні × 25 балів і таймер {{ timerMinutes }} хв.</div>
+</div>
+</div>
+<button type="button" onClick="{{ onStartTraining }}" style="margin-top:auto;height:72px;border:0;padding:8px 20px 16px;background:transparent url({{ A.a_buttons_primary_normal_svg }}) center/100% 100%;color:#ecf8ff;display:flex;align-items:center;justify-content:center;gap:16px;font-size:25px;font-weight:700;white-space:nowrap;cursor:pointer" style-hover="background-image:url({{ A.a_buttons_primary_hover_svg }})" style-active="background-image:url({{ A.a_buttons_primary_pressed_svg }});padding-top:14px;padding-bottom:10px"><img src="{{ A.a_icons_next_svg }}" alt="" style="width:30px;height:30px;filter:brightness(1.5)"><span>ПЕРЕЙТИ ДО ТРЕНУВАННЯ</span></button>
+</div>
+</div>
+</div>
+</sc-if>
+
+<!-- ЕКРАНИ 2–3: ТРЕНУВАННЯ ТА ОСНОВНА ГРА -->
+<sc-if value="{{ isPlay }}" hint-placeholder-val="{{ false }}">
+<div style="height:100%;display:flex;flex-direction:column">
+<div style="height:110px;display:flex;align-items:flex-start;gap:30px;margin-bottom:14px">
+<div style="display:flex;gap:22px;align-items:center;min-width:465px;border-right:2px solid #0ba5c366;padding-right:30px;height:106px">
+<img src="{{ A.a_mascot_hud_pixel_svg }}" alt="" style="width:75px;height:94px;image-rendering:pixelated">
+<div><div style="font-size:40px;font-weight:700;letter-spacing:.02em;color:#dffbff;text-shadow:0 0 18px #00b5ff88;line-height:1.1">CAPTCHA <span style="color:#00e8f3">AI</span></div><div style="color:#00cfff;font-size:20px;margin-top:8px">Доведи, що ти людина!</div></div>
+</div>
+<sc-if value="{{ isTraining }}" hint-placeholder-val="{{ false }}">
+<div style="flex:1;min-width:0;padding-top:3px">
+<h2 style="font-size:35px;color:#21dfff;text-shadow:0 0 15px #008cff88">ТРЕНУВАЛЬНИЙ РІВЕНЬ</h2>
+<p style="font-size:20px;color:#b3cde5;margin-top:8px">Без таймера та балів. Можна помилятися й експериментувати.</p>
+<p style="font-size:18px;color:#7edbff;margin-top:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Команда «{{ team }}»</p>
+</div>
+</sc-if>
+<sc-if value="{{ isMain }}" hint-placeholder-val="{{ false }}">
+<div style="flex:1;min-width:0;padding-top:3px">
+<h2 style="font-size:35px;color:#21dfff;text-shadow:0 0 15px #008cff88">ОСНОВНА ГРА</h2>
+<div style="display:flex;align-items:center;gap:14px;font-size:21px;color:#b3cde5;margin-top:12px;white-space:nowrap;min-width:0">
+<span style="overflow:hidden;text-overflow:ellipsis;min-width:0;max-width:330px">Команда «{{ team }}»</span>
+<span style="color:#4f7493">·</span>
+<span style="color:#e6f4ff;font-weight:700">Рівень {{ levelNum }} / 4</span>
+<div style="display:flex;gap:12px;margin-left:4px" aria-label="{{ progressAria }}">
+<sc-for list="{{ dots }}" as="d" hint-placeholder-count="4">
+<i style="display:block;width:18px;height:18px;border-radius:50%;border:2px solid {{ d.border }};background:{{ d.bg }};box-shadow:{{ d.shadow }}"></i>
+</sc-for>
+</div>
+</div>
+</div>
+<div style="position:relative;background:url({{ A.a_panels_timer_svg }}) center/100% 100%;padding:12px 22px;min-width:200px;height:102px">
+<div style="display:flex;align-items:center;gap:8px;font-size:15px;color:#8cdfff;letter-spacing:.06em"><img src="{{ A.a_icons_timer_svg }}" alt="" style="width:22px;height:22px">{{ timerLabel }}</div>
+<div style="font-size:38px;font-weight:700;white-space:nowrap;font-variant-numeric:tabular-nums;color:{{ timerColor }}">{{ timerText }}</div>
+</div>
+<div ref="{{ scoreRef }}" style="position:relative;background:url({{ A.a_panels_score_svg }}) center/100% 100%;padding:12px 22px;min-width:200px;height:102px">
+<div style="display:flex;align-items:center;gap:8px;font-size:15px;color:#8cdfff;letter-spacing:.06em"><img src="{{ A.a_icons_trophy_svg }}" alt="" style="width:22px;height:22px">РАХУНОК</div>
+<div style="font-size:38px;font-weight:700;white-space:nowrap;font-variant-numeric:tabular-nums;color:#ffd46f">{{ score }} <span style="font-size:26px;color:#d7e8fc">/ 100</span></div>
+</div>
+</sc-if>
+</div>
+
+<div style="display:grid;grid-template-columns:730px 1fr;gap:36px;height:580px">
+<div ref="{{ boardRef }}" style="display:flex;align-items:center;justify-content:center;background:url({{ A.a_panels_hud_large_svg }}) center/100% 100%;position:relative">
+<div style="width:565px;height:565px;display:grid;grid-template-columns:{{ boardCols }};gap:{{ boardGap }};padding:6px">
+<sc-for list="{{ keys }}" as="k" hint-placeholder-count="9">
+<button type="button" data-key-idx="{{ k.idx }}" disabled="{{ k.disabled }}" aria-label="{{ k.aria }}" aria-pressed="{{ k.on }}" onClick="{{ k.onPress }}" style="position:relative;aspect-ratio:1;background:none;border:0;padding:0;display:block;isolation:isolate;cursor:{{ k.cursor }};touch-action:manipulation;transition:filter .14s,transform .085s;color:{{ k.color }};text-shadow:{{ k.shadow }};-webkit-tap-highlight-color:transparent" style-hover="filter:brightness(1.2)" style-active="transform:translateY(2%) scale(.985)">
+<img src="{{ k.src }}" alt="" draggable="false" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;pointer-events:none">
+<img data-pulse="1" src="{{ A.a_effects_key_pulse_svg }}" alt="" draggable="false" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;pointer-events:none;opacity:0">
+<span style="position:absolute;inset:0;display:grid;place-items:center;transform:translateY(-3%);font-size:{{ k.fs }};font-weight:700;line-height:1;pointer-events:none">{{ k.letter }}</span>
+<sc-if value="{{ k.mark }}" hint-placeholder-val="{{ false }}"><i style="position:absolute;left:19%;top:17%;width:11%;height:11%;transform:rotate(45deg);pointer-events:none;background:{{ k.markBg }};border:2px solid {{ k.markBorder }};box-shadow:{{ k.markShadow }}"></i></sc-if>
+</button>
+</sc-for>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:14px;min-width:0">
+<sc-if value="{{ isTraining }}" hint-placeholder-val="{{ false }}">
+<div style="position:relative;background:url({{ A.a_panels_rules_svg }}) center/100% 100%;padding:20px 30px;height:150px">
+<h3 style="font-size:26px;color:#11deee;display:flex;align-items:center;gap:15px;margin-bottom:8px"><img src="{{ A.a_icons_grid_svg }}" alt="" style="width:34px;height:34px">ПРАВИЛА</h3>
+<p style="font-size:20px;color:#c1d7ed;line-height:1.4">Натискання змінює клавішу та її сусідів вище, нижче, ліворуч і праворуч. Відтвори на полі зразок — усі клавіші мають збігтися.</p>
+</div>
+<div style="position:relative;background:url({{ A.a_panels_hud_medium_svg }}) center/100% 100%;padding:18px 28px 18px 24px;height:176px;display:flex;align-items:center;gap:24px">
+<div aria-label="{{ targetAria }}" role="img" style="width:140px;height:140px;flex-shrink:0;display:grid;grid-template-columns:{{ boardCols }};gap:{{ targetGap }};padding:8px;background:#020a16;border:1px solid #1d6f9a;border-radius:8px;box-shadow:inset 0 0 14px #00a2ff33">
+<sc-for list="{{ targetCells }}" as="c" hint-placeholder-count="9"><i style="display:block;border-radius:3px;background:{{ c.bg }};border:1px solid {{ c.border }};box-shadow:{{ c.shadow }}"></i></sc-for>
+</div>
+<div style="min-width:0;flex:1;display:flex;flex-direction:column;gap:6px">
+<h3 style="font-size:26px;color:#11deee;display:flex;align-items:center;gap:15px"><img src="{{ A.a_icons_grid_svg }}" alt="" style="width:34px;height:34px">ЗРАЗОК</h3>
+<p style="font-size:20px;color:#7edbff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">«{{ patternName }}» · {{ sizeText }}</p>
+<div style="display:flex;align-items:center;gap:14px;font-size:20px;color:#c1d7ed"><span style="white-space:nowrap">Збіг: <b style="color:{{ matchColor }};font-variant-numeric:tabular-nums">{{ matchText }}</b></span><span style="flex:1;height:8px;border-radius:4px;background:#0b2238;overflow:hidden;border:1px solid #1d4f72"><i style="display:block;height:100%;width:{{ matchPct }};background:{{ matchColor }};box-shadow:0 0 8px {{ matchColor }};transition:width .2s"></i></span></div>
+<p style="font-size:17px;color:#9eb7d2">{{ targetNote }}</p>
+</div>
+</div>
+</sc-if>
+<sc-if value="{{ isMain }}" hint-placeholder-val="{{ false }}">
+<div style="position:relative;background:url({{ A.a_panels_hud_medium_svg }}) center/100% 100%;padding:18px 28px 18px 24px;height:176px;display:flex;align-items:center;gap:24px">
+<div aria-label="{{ targetAria }}" role="img" style="width:140px;height:140px;flex-shrink:0;display:grid;grid-template-columns:{{ boardCols }};gap:{{ targetGap }};padding:8px;background:#020a16;border:1px solid #1d6f9a;border-radius:8px;box-shadow:inset 0 0 14px #00a2ff33">
+<sc-for list="{{ targetCells }}" as="c" hint-placeholder-count="9"><i style="display:block;border-radius:3px;background:{{ c.bg }};border:1px solid {{ c.border }};box-shadow:{{ c.shadow }}"></i></sc-for>
+</div>
+<div style="min-width:0;flex:1;display:flex;flex-direction:column;gap:6px">
+<h3 style="font-size:26px;color:#11deee;display:flex;align-items:center;gap:15px"><img src="{{ A.a_icons_grid_svg }}" alt="" style="width:34px;height:34px">ЗРАЗОК
+<sc-if value="{{ isReturned }}" hint-placeholder-val="{{ false }}"><span style="margin-left:auto;font-size:15px;color:#ffa531;border:1px solid #ffa53199;border-radius:5px;padding:3px 10px;letter-spacing:.05em">ВІДКЛАДЕНИЙ</span></sc-if>
+</h3>
+<p style="font-size:20px;color:#7edbff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">«{{ patternName }}» · {{ sizeText }}</p>
+<div style="display:flex;align-items:center;gap:14px;font-size:20px;color:#c1d7ed"><span style="white-space:nowrap">Збіг: <b style="color:{{ matchColor }};font-variant-numeric:tabular-nums">{{ matchText }}</b></span><span style="flex:1;height:8px;border-radius:4px;background:#0b2238;overflow:hidden;border:1px solid #1d4f72"><i style="display:block;height:100%;width:{{ matchPct }};background:{{ matchColor }};box-shadow:0 0 8px {{ matchColor }};transition:width .2s"></i></span></div>
+<p style="font-size:17px;color:#9eb7d2">{{ targetNote }}</p>
+</div>
+</div>
+<div style="position:relative;background:url({{ A.a_panels_move_limit_svg }}) center/100% 100%;padding:0 34px 0 30px;height:110px;display:flex;align-items:center;justify-content:space-between;gap:20px">
+<div>
+<h3 style="font-size:25px;color:#11deee;display:flex;align-items:center;gap:15px;margin-bottom:4px"><img src="{{ A.a_icons_warning_svg }}" alt="" style="width:34px;height:34px">ЛІМІТ ХОДІВ</h3>
+<p style="font-size:19px;color:#9eb7d2">на одну спробу · спроба №{{ attempt }}</p>
+</div>
+<strong style="font-size:60px;line-height:1;font-variant-numeric:tabular-nums;color:#f2fbff;text-shadow:0 0 16px #00b5ff66">{{ limit }}</strong>
+</div>
+<div style="position:relative;background:url({{ A.a_panels_current_move_svg }}) center/100% 100%;padding:0 30px;height:96px;display:flex;align-items:center;justify-content:space-between;gap:20px">
+<h3 style="font-size:25px;color:#11deee;display:flex;align-items:center;gap:15px"><img src="{{ A.a_icons_undo_svg }}" alt="" style="width:34px;height:34px">ВИКОРИСТАНІ ХОДИ</h3>
+<strong style="font-size:40px;font-variant-numeric:tabular-nums;color:{{ movesColor }}">{{ movesUsed }} / {{ limit }}</strong>
+</div>
+</sc-if>
+<div style="position:relative;background:url({{ A.a_panels_message_svg }}) center/100% 100%;padding:14px 28px 14px 20px;flex:1;min-height:0;display:flex;align-items:center;gap:20px">
+<img ref="{{ mascotRef }}" src="{{ msgPose }}" alt="" draggable="false" style="width:118px;height:118px;object-fit:contain;flex-shrink:0;filter:drop-shadow(0 0 10px #0777ff66)">
+<div ref="{{ msgRef }}" style="min-width:0">
+<b style="display:block;color:#13deef;font-size:17px;margin-bottom:5px;letter-spacing:.04em">CAPTCHA AI</b>
+<p style="font-size:21px;color:#e2f0fc;line-height:1.42;text-wrap:pretty">{{ msgText }}</p>
+</div>
+</div>
+</div>
+</div>
+
+<div style="height:88px;display:flex;gap:24px;margin-top:14px">
+<button type="button" disabled="{{ undoDisabled }}" onClick="{{ onUndo }}" style="flex:1;border:0;padding:8px 20px 16px;background:transparent url({{ undoBg }}) center/100% 100%;color:{{ undoColor }};display:flex;align-items:center;justify-content:center;gap:16px;font-size:25px;font-weight:700;white-space:nowrap;cursor:pointer;pointer-events:{{ undoPe }};transition:filter .14s" style-hover="filter:brightness(1.15)" style-active="transform:translateY(3px)"><img src="{{ A.a_icons_undo_svg }}" alt="" style="width:30px;height:30px;filter:brightness(1.5)"><span>Скасувати хід</span></button>
+<button type="button" onClick="{{ onReset }}" style="flex:1;border:0;padding:8px 20px 16px;background:transparent url({{ A.a_buttons_warning_normal_svg }}) center/100% 100%;color:#fff3e2;display:flex;align-items:center;justify-content:center;gap:16px;font-size:25px;font-weight:700;white-space:nowrap;cursor:pointer" style-hover="background-image:url({{ A.a_buttons_warning_hover_svg }})" style-active="background-image:url({{ A.a_buttons_warning_pressed_svg }});padding-top:14px;padding-bottom:10px"><img src="{{ A.a_icons_reset_svg }}" alt="" style="width:30px;height:30px;filter:brightness(1.5)"><span>{{ resetLabel }}</span></button>
+<sc-if value="{{ isTraining }}" hint-placeholder-val="{{ false }}">
+<button type="button" disabled="{{ nextDisabled }}" onClick="{{ onStartMain }}" style="flex:1;border:0;padding:8px 20px 16px;background:transparent url({{ nextBg }}) center/100% 100%;color:{{ nextColor }};display:flex;align-items:center;justify-content:center;gap:16px;font-size:25px;font-weight:700;white-space:nowrap;cursor:pointer;pointer-events:{{ nextPe }};transition:filter .14s" style-hover="filter:brightness(1.15)" style-active="transform:translateY(3px)"><img src="{{ nextIcon }}" alt="" style="width:30px;height:30px;filter:brightness(1.5)"><span style="display:flex;flex-direction:column;align-items:flex-start;line-height:1.15"><span>До основної гри</span><span style="font-size:15px;font-weight:400;opacity:.85">{{ nextSub }}</span></span></button>
+</sc-if>
+<sc-if value="{{ isMain }}" hint-placeholder-val="{{ false }}">
+<button type="button" onClick="{{ onSkip }}" style="flex:1;border:0;padding:8px 20px 16px;background:transparent url({{ A.a_buttons_danger_normal_svg }}) center/100% 100%;color:#ffe9ec;display:flex;align-items:center;justify-content:center;gap:16px;font-size:25px;font-weight:700;white-space:nowrap;cursor:pointer" style-hover="background-image:url({{ A.a_buttons_danger_hover_svg }})" style-active="background-image:url({{ A.a_buttons_danger_pressed_svg }});padding-top:14px;padding-bottom:10px"><img src="{{ A.a_icons_skip_svg }}" alt="" style="width:30px;height:30px;filter:brightness(1.5)"><span>Пропустити рівень</span></button>
+</sc-if>
+</div>
+</div>
+</sc-if>
+
+<!-- ЕКРАН 5: РЕЗУЛЬТАТИ -->
+<sc-if value="{{ isResults }}" hint-placeholder-val="{{ false }}">
+<div style="height:100%;display:flex;flex-direction:column">
+<div style="height:110px;display:flex;align-items:flex-start;gap:30px;margin-bottom:14px">
+<div style="display:flex;gap:22px;align-items:center;min-width:465px;border-right:2px solid #0ba5c366;padding-right:30px;height:106px">
+<img src="{{ A.a_mascot_hud_pixel_svg }}" alt="" style="width:75px;height:94px;image-rendering:pixelated">
+<div><div style="font-size:40px;font-weight:700;letter-spacing:.02em;color:#dffbff;text-shadow:0 0 18px #00b5ff88;line-height:1.1">CAPTCHA <span style="color:#00e8f3">AI</span></div><div style="color:#00cfff;font-size:20px;margin-top:8px">Доведи, що ти людина!</div></div>
+</div>
+<div style="flex:1;min-width:0;padding-top:3px">
+<h2 style="font-size:35px;color:#21dfff;text-shadow:0 0 15px #008cff88">ПІДСУМКОВИЙ РЕЗУЛЬТАТ</h2>
+<p style="font-size:20px;color:#b3cde5;margin-top:8px">{{ r.note }}</p>
+</div>
+<div style="text-align:right;font-size:18px;color:#9eb7d2;line-height:1.6;padding-top:6px">
+<div>«Логічні лабіринти»</div>
+<div>{{ r.dateText }}</div>
+<div style="color:{{ exportMsgColor }};font-size:16px">{{ exportMsg }}</div>
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:928px 687px;gap:25px;height:580px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<div style="height:116px;display:flex;align-items:center;justify-content:space-between;gap:20px;background:url({{ A.a_panels_team_svg }}) center/100% 100%;padding:14px 25px">
+<div style="display:flex;align-items:center;gap:18px;min-width:0">
+<img src="{{ A.a_icons_users_svg }}" alt="" style="width:44px;height:44px;flex-shrink:0">
+<div style="min-width:0"><div style="color:#67cdfa;font-size:17px">КОМАНДА</div><div style="font-size:32px;font-weight:700;max-width:540px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">{{ r.team }}</div></div>
+</div>
+<div style="text-align:right;flex-shrink:0"><div style="color:#67cdfa;font-size:17px">РАХУНОК</div><div style="font-size:52px;font-weight:700;line-height:1.05;color:#ffd56d;text-shadow:0 0 16px #ffb40055;font-variant-numeric:tabular-nums">{{ r.score }} <span style="font-size:30px;color:#d7e8fc;text-shadow:none">/ 100</span></div></div>
+</div>
+<div style="height:224px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px">
+<sc-for list="{{ r.levels }}" as="lv" hint-placeholder-count="4">
+<article style="background:url({{ A.a_panels_level_result_svg }}) center/100% 100%;padding:18px 10px 16px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:space-between">
+<div><h3 style="font-size:20px;color:#84ccff">{{ lv.title }}</h3><div style="font-size:15px;color:#9eb7d2">{{ lv.size }}</div></div>
+<img src="{{ lv.iconSrc }}" alt="" style="width:40px;height:40px">
+<strong style="font-size:36px;line-height:1;color:{{ lv.color }}">{{ lv.points }}<span style="font-size:22px;color:#8ab6d8"> / {{ lv.max }}</span></strong>
+<span style="font-size:15px;font-weight:700;white-space:nowrap;color:{{ lv.color }}">{{ lv.statusUpper }}</span>
+<small style="font-size:14px;color:#a6bfd5;white-space:nowrap">{{ lv.time }} · ходів {{ lv.moves }} · спроб {{ lv.attempts }}</small>
+</article>
+</sc-for>
+</div>
+<div style="height:82px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
+<div style="background:url({{ A.a_panels_hud_medium_svg }}) center/100% 100%;padding:13px 24px"><div style="color:#77c5ee;font-size:14px;margin-bottom:2px">ЗАГАЛЬНИЙ ЧАС</div><b style="font-size:26px;font-variant-numeric:tabular-nums">{{ r.totalTime }} / {{ r.totalLimit }}</b></div>
+<div style="background:url({{ A.a_panels_hud_medium_svg }}) center/100% 100%;padding:13px 24px"><div style="color:#77c5ee;font-size:14px;margin-bottom:2px">ВИКОРИСТАНІ ХОДИ</div><b style="font-size:26px">{{ r.totalMoves }}</b></div>
+<div style="background:url({{ A.a_panels_hud_medium_svg }}) center/100% 100%;padding:13px 24px"><div style="color:#77c5ee;font-size:14px;margin-bottom:2px">КІЛЬКІСТЬ СПРОБ</div><b style="font-size:26px">{{ r.totalAttempts }}</b></div>
+</div>
+<div style="height:122px;background:url({{ A.a_panels_message_svg }}) center/100% 100%;display:flex;align-items:center;gap:26px;padding:15px 26px">
+<img src="{{ A.a_mascot_hud_pixel_svg }}" alt="" style="width:64px;height:80px;image-rendering:pixelated;flex-shrink:0">
+<div><b style="display:block;color:#13deef;font-size:17px;margin-bottom:5px">CAPTCHA AI</b><p style="font-size:19px;color:#c1d7ed;line-height:1.38">{{ r.ending.ai }}</p></div>
+</div>
+</div>
+
+<div style="position:relative">
+<sc-if value="{{ r.complete }}" hint-placeholder-val="{{ false }}">
+<img ref="{{ burstRef }}" src="{{ A.a_effects_success_burst_svg }}" alt="" style="position:absolute;left:133px;top:-20px;width:420px;height:340px;object-fit:contain;opacity:.9;pointer-events:none">
+</sc-if>
+<img ref="{{ resultMascotRef }}" src="{{ r.poseSrc }}" alt="{{ r.ending.title }}" draggable="false" style="position:absolute;left:193px;top:-4px;width:300px;height:310px;object-fit:contain;filter:drop-shadow(0 0 20px #0777ff55)">
+<div style="position:absolute;left:0;right:0;top:315px;height:265px;background:url({{ A.a_panels_hud_large_svg }}) center/100% 100%;padding:24px 28px">
+<sc-if value="{{ r.complete }}" hint-placeholder-val="{{ false }}">
+<h3 style="font-size:44px;line-height:1.1;color:#36efa6;text-shadow:0 0 16px #36efa688;margin-bottom:10px">{{ r.ending.title }}</h3>
+<p style="font-size:20px;line-height:1.4">{{ r.ending.status }}</p>
+<div role="note" style="margin-top:22px;height:66px;display:flex;align-items:center;justify-content:center;background:url({{ A.a_buttons_success_normal_svg }}) center/100% 100%;padding-bottom:6px;font-size:21px;font-weight:700;color:#ecf8ff;cursor:default">ПЕРЕЙТИ ДО РЕЄСТРАЦІЇ →</div>
+</sc-if>
+<sc-if value="{{ r.notComplete }}" hint-placeholder-val="{{ false }}">
+<h3 style="font-size:25px;color:#ffa531;margin-bottom:12px">{{ r.ending.title }}</h3>
+<p style="font-size:20px;line-height:1.4">{{ r.ending.status }}</p>
+<div style="margin-top:26px;display:inline-block;border:1.5px solid #2d5d74;padding:8px 16px;border-radius:6px;font-size:16px;font-weight:700;color:#70d8e9">ДОСТУП ДО РЕЄСТРАЦІЇ ЗАБЛОКОВАНО</div>
+</sc-if>
+</div>
+</div>
+</div>
+
+<div style="display:flex;gap:20px;height:88px;margin-top:14px">
+<button type="button" onClick="{{ onHome }}" style="flex:1;border:0;padding:8px 20px 16px;background:transparent url({{ A.a_buttons_neutral_normal_svg }}) center/100% 100%;color:#ecf8ff;display:flex;align-items:center;justify-content:center;gap:16px;font-size:23px;font-weight:700;white-space:nowrap;cursor:pointer" style-hover="background-image:url({{ A.a_buttons_neutral_hover_svg }})" style-active="background-image:url({{ A.a_buttons_neutral_pressed_svg }});padding-top:14px;padding-bottom:10px"><img src="{{ A.a_icons_home_svg }}" alt="" style="width:30px;height:30px;filter:brightness(1.5)"><span>На головну</span></button>
+<button type="button" onClick="{{ onReplay }}" style="flex:1;border:0;padding:8px 20px 16px;background:transparent url({{ A.a_buttons_primary_normal_svg }}) center/100% 100%;color:#ecf8ff;display:flex;align-items:center;justify-content:center;gap:16px;font-size:23px;font-weight:700;white-space:nowrap;cursor:pointer" style-hover="background-image:url({{ A.a_buttons_primary_hover_svg }})" style-active="background-image:url({{ A.a_buttons_primary_pressed_svg }});padding-top:14px;padding-bottom:10px"><img src="{{ A.a_icons_reset_svg }}" alt="" style="width:30px;height:30px;filter:brightness(1.5)"><span>Пройти ще раз</span></button>
+<button type="button" onClick="{{ onExport }}" disabled="{{ exporting }}" style="flex:1;border:0;padding:8px 20px 16px;background:transparent url({{ A.a_buttons_primary_normal_svg }}) center/100% 100%;color:#ecf8ff;display:flex;align-items:center;justify-content:center;gap:16px;font-size:23px;font-weight:700;white-space:nowrap;cursor:pointer" style-hover="background-image:url({{ A.a_buttons_primary_hover_svg }})" style-active="background-image:url({{ A.a_buttons_primary_pressed_svg }});padding-top:14px;padding-bottom:10px"><img src="{{ A.a_icons_download_svg }}" alt="" style="width:30px;height:30px;filter:brightness(1.5)"><span>{{ exportLabel }}</span></button>
+</div>
+</div>
+</sc-if>
+
+<div style="position:absolute;inset:0;background:url({{ A.a_effects_scanlines_svg }});opacity:.3;pointer-events:none;z-index:2"></div>
+</div>
+
+<img src="{{ A.a_monitor_glass_svg }}" alt="" style="position:absolute;left:100px;top:100px;width:1720px;height:870px;z-index:3;pointer-events:none">
+<img src="{{ A.a_monitor_crt_frame_svg }}" alt="" style="position:absolute;inset:0;width:100%;height:100%;z-index:4;pointer-events:none">
+<img src="{{ A.a_monitor_sticker_1_svg }}" alt="" style="position:absolute;width:65px;height:76px;z-index:5;pointer-events:none;filter:drop-shadow(3px 5px 3px #0009);top:180px;left:16px;transform:rotate(-8deg)">
+<img src="{{ A.a_monitor_sticker_2_svg }}" alt="" style="position:absolute;width:65px;height:76px;z-index:5;pointer-events:none;filter:drop-shadow(3px 5px 3px #0009);top:455px;right:15px;transform:rotate(9deg)">
+<img src="{{ A.a_monitor_sticker_3_svg }}" alt="" style="position:absolute;width:65px;height:76px;z-index:5;pointer-events:none;filter:drop-shadow(3px 5px 3px #0009);top:515px;left:15px;transform:rotate(-3deg)">
+
+<button type="button" onClick="{{ onToggleSound }}" aria-pressed="{{ sound }}" title="Увімкнути або вимкнути звук" style="position:absolute;left:400px;top:992px;z-index:5;height:46px;padding:0 20px 6px;border:0;background:transparent url({{ A.a_buttons_neutral_normal_svg }}) center/100% 100%;color:{{ soundColor }};font-size:17px;font-weight:700;letter-spacing:.05em;cursor:pointer;white-space:nowrap" style-hover="filter:brightness(1.2)">{{ soundLabel }}</button>
+
+<sc-if value="{{ showModal }}" hint-placeholder-val="{{ false }}">
+<div ref="{{ overlayRef }}" style="position:absolute;inset:0;z-index:6;display:flex;align-items:center;justify-content:center;background:rgba(1,5,12,.78);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px)">
+<sc-if value="{{ m.big }}" hint-placeholder-val="{{ false }}">
+<section ref="{{ modalRef }}" role="dialog" aria-modal="true" aria-label="{{ m.title }}" style="position:relative;width:1120px;height:660px;background:url({{ m.bg }}) center/100% 100%;padding:42px 60px;isolation:isolate;display:flex;flex-direction:column">
+<h2 style="font-size:40px;text-align:center;border-bottom:1px solid #168ba8;padding-bottom:20px;text-shadow:0 0 16px #1c8dff55;letter-spacing:.03em">{{ m.title }}</h2>
+<div style="height:400px;display:flex;align-items:center;gap:35px">
+<img src="{{ m.pose }}" alt="" draggable="false" style="width:350px;height:360px;object-fit:contain;filter:drop-shadow(0 0 20px #0777ff55);flex-shrink:0">
+<div style="flex:1;min-width:0">
+<div style="font-size:{{ m.bonusSize }};color:{{ m.bonusColor }};font-weight:700;text-shadow:0 0 25px {{ m.bonusGlow }};white-space:nowrap;line-height:1.1;font-variant-numeric:tabular-nums">{{ m.bonus }}</div>
+<div style="margin-top:24px;border:1px solid #1d6f9a;border-radius:10px;background:#04142699;padding:18px 22px;display:flex;gap:18px;align-items:flex-start">
+<img src="{{ A.a_mascot_hud_pixel_svg }}" alt="" style="width:40px;height:50px;image-rendering:pixelated;flex-shrink:0">
+<div><b style="display:block;color:#13deef;font-size:18px;margin-bottom:4px">CAPTCHA AI:</b><p style="font-size:23px;line-height:1.45;color:#e6f4ff">{{ m.text }}</p></div>
+</div>
+</div>
+</div>
+<button type="button" onClick="{{ onModalPrimary }}" style="height:80px;width:70%;margin:auto auto 0;border:0;padding:8px 20px 16px;background:transparent url({{ m.primaryBg }}) center/100% 100%;color:#ecf8ff;display:flex;align-items:center;justify-content:center;gap:16px;font-size:27px;font-weight:700;letter-spacing:.04em;white-space:nowrap;cursor:pointer;transition:filter .14s" style-hover="filter:brightness(1.15)" style-active="transform:translateY(3px)"><img src="{{ A.a_icons_next_svg }}" alt="" style="width:30px;height:30px;filter:brightness(1.5)"><span>{{ m.primary }}</span></button>
+</section>
+</sc-if>
+<sc-if value="{{ m.confirm }}" hint-placeholder-val="{{ false }}">
+<section ref="{{ modalRef }}" role="dialog" aria-modal="true" aria-label="{{ m.title }}" style="position:relative;width:940px;height:500px;background:url({{ A.a_popups_confirmation_svg }}) center/100% 100%;padding:36px 56px;isolation:isolate;display:flex;flex-direction:column">
+<h2 style="font-size:36px;text-align:center;border-bottom:1px solid #168ba8;padding-bottom:18px;text-shadow:0 0 16px #1c8dff55">{{ m.title }}</h2>
+<div style="flex:1;display:flex;align-items:center;gap:30px">
+<img src="{{ m.pose }}" alt="" draggable="false" style="width:220px;height:230px;object-fit:contain;flex-shrink:0">
+<div style="flex:1;min-width:0">
+<div style="font-size:27px;font-weight:700;color:{{ m.bonusColor }}">{{ m.bonus }}</div>
+<p style="font-size:23px;margin-top:14px;line-height:1.45;color:#dcebf8">{{ m.text }}</p>
+</div>
+</div>
+<div style="display:flex;gap:18px">
+<button type="button" onClick="{{ onModalSecondary }}" style="flex:1;height:70px;border:0;padding:8px 20px 16px;background:transparent url({{ A.a_buttons_neutral_normal_svg }}) center/100% 100%;color:#ecf8ff;display:flex;align-items:center;justify-content:center;gap:14px;font-size:22px;font-weight:700;white-space:nowrap;cursor:pointer" style-hover="background-image:url({{ A.a_buttons_neutral_hover_svg }})" style-active="background-image:url({{ A.a_buttons_neutral_pressed_svg }});padding-top:14px;padding-bottom:10px"><img src="{{ A.a_icons_undo_svg }}" alt="" style="width:26px;height:26px;filter:brightness(1.5)"><span>{{ m.secondary }}</span></button>
+<button type="button" onClick="{{ onModalPrimary }}" style="flex:1;height:70px;border:0;padding:8px 20px 16px;background:transparent url({{ m.primaryBg }}) center/100% 100%;color:#ffffff;display:flex;align-items:center;justify-content:center;gap:14px;font-size:22px;font-weight:700;white-space:nowrap;cursor:pointer;transition:filter .14s" style-hover="filter:brightness(1.15)" style-active="transform:translateY(3px)"><img src="{{ m.primaryIcon }}" alt="" style="width:26px;height:26px;filter:brightness(1.5)"><span>{{ m.primary }}</span></button>
+</div>
+</section>
+</sc-if>
+</div>
+</sc-if>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;targetMarks&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Підказки&quot;}}">
+// Інтерфейс гри. Уся ігрова логіка — у модулях game/*.js (див. README.md).
+class Component extends DCLogic {
+  static ASSETS = ["backgrounds/crt-screen.svg","backgrounds/workshop.png","buttons/danger-disabled.svg","buttons/danger-hover.svg","buttons/danger-normal.svg","buttons/danger-pressed.svg","buttons/disabled-disabled.svg","buttons/disabled-hover.svg","buttons/disabled-normal.svg","buttons/disabled-pressed.svg","buttons/neutral-disabled.svg","buttons/neutral-hover.svg","buttons/neutral-normal.svg","buttons/neutral-pressed.svg","buttons/primary-disabled.svg","buttons/primary-hover.svg","buttons/primary-normal.svg","buttons/primary-pressed.svg","buttons/success-disabled.svg","buttons/success-hover.svg","buttons/success-normal.svg","buttons/success-pressed.svg","buttons/warning-disabled.svg","buttons/warning-hover.svg","buttons/warning-normal.svg","buttons/warning-pressed.svg","comics/speech.svg","comics/students.png","effects/dim.svg","effects/key-pulse.svg","effects/scanlines.svg","effects/success-burst.svg","icons/check.svg","icons/download.svg","icons/error.svg","icons/grid.svg","icons/home.svg","icons/next.svg","icons/reset.svg","icons/robot.svg","icons/skip.svg","icons/timer.svg","icons/trophy.svg","icons/undo.svg","icons/users.svg","icons/warning.svg","keycaps/active.svg","keycaps/disabled.svg","keycaps/hover.svg","keycaps/inactive.svg","keycaps/light-blue.svg","keycaps/light-green.svg","keycaps/pressed.svg","keycaps/success.svg","keycaps/toggled.svg","mascot/access_denied.png","mascot/celebrating.png","mascot/disappointed.png","mascot/explaining.png","mascot/friendly.png","mascot/hud-pixel.svg","mascot/human_confirmed.png","mascot/neutral.png","mascot/skeptical.png","mascot/surprised.png","mascot/thinking.png","monitor/crt-frame.svg","monitor/glass.svg","monitor/sticker-1.svg","monitor/sticker-2.svg","monitor/sticker-3.svg","panels/current-move.svg","panels/hud-compact.svg","panels/hud-large.svg","panels/hud-medium.svg","panels/input.svg","panels/level-result.svg","panels/level.svg","panels/message.svg","panels/modal.svg","panels/move-limit.svg","panels/rules.svg","panels/score.svg","panels/team.svg","panels/timer.svg","popups/complete.svg","popups/confirmation.svg","popups/skipped.svg","popups/success.svg","popups/timeout.svg"];
+  state = { g: null, s: null, now: Date.now(), scale: 1, teamDraft: '', teamError: '', sound: true, holdUntil: 0, bonusCount: 25, exporting: false, exportMsg: '', exportOk: true, loadError: '' };
+  stageRef = React.createRef(); boardRef = React.createRef(); scoreRef = React.createRef(); msgRef = React.createRef(); mascotRef = React.createRef();
+  modalRef = React.createRef(); overlayRef = React.createRef(); burstRef = React.createRef(); resultMascotRef = React.createRef();
+  lockUntil = 0;
+
+  componentDidMount() {
+    this.rm = !!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
+    this.onResize = () => this.setState({ scale: Math.min(window.innerWidth / 1920, window.innerHeight / 1080) });
+    window.addEventListener('resize', this.onResize);
+    this.onResize();
+    this.onKey = (e) => this.handleKey(e);
+    window.addEventListener('keydown', this.onKey);
+    this.onVis = () => this.tick();
+    document.addEventListener('visibilitychange', this.onVis);
+    const waitBundle = () => new Promise((res, rej) => { let k = 0; const t = () => { if (window.CAPTCHA_GAME_BUNDLE) res(window.CAPTCHA_GAME_BUNDLE); else if (++k > 200) rej(new Error('bundle missing')); else setTimeout(t, 25); }; t(); });
+    waitBundle().then((g) => {
+      window.CAPTCHA_GAME = g;
+      const s = g.state.restore(g.storage.loadSession(), Date.now());
+      g.storage.saveSession(s);
+      this.setState({ g, s, now: Date.now(), sound: g.sfx.isEnabled(), teamDraft: s.team || '' });
+      this.interval = setInterval(() => this.tick(), 250);
+    }).catch((err) => {
+      console.error(err);
+      this.setState({ loadError: 'Не вдалося завантажити модулі гри. Відкрийте гру через локальний або статичний сервер (див. README.md).' });
+    });
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
+    clearTimeout(this.autoTimer);
+    window.removeEventListener('resize', this.onResize);
+    window.removeEventListener('keydown', this.onKey);
+    document.removeEventListener('visibilitychange', this.onVis);
+  }
+
+  visibleModal(st) {
+    const s = st.s;
+    if (!s || !s.modal) return null;
+    if (s.modal === 'success' && st.now < st.holdUntil) return null;
+    return s.modal;
+  }
+
+  componentDidUpdate() {
+    // Порівнюємо з власним знімком попереднього стану (не залежимо від аргументів рантайму).
+    const prev = this._prev || {};
+    this._prev = { s: this.state.s, now: this.state.now, holdUntil: this.state.holdUntil, g: this.state.g };
+    const cur = this.visibleModal(this.state);
+    const was = this.visibleModal(prev);
+    if (cur && cur !== was) this.onModalShown(cur);
+    const ps = prev.s, s = this.state.s;
+    if (s && ps && s.msg && ps.msg && s.msg.text !== ps.msg.text && s.stage === ps.stage) this.animateMsg();
+    if (s && ps && s.stage === 'main' && ps.stage === 'main' && this.state.g.scoring.totalScore(s.levels) > this.state.g.scoring.totalScore(ps.levels)) {
+      this.anim(this.scoreRef.current, [{ transform: 'scale(1)' }, { transform: 'scale(1.12)', filter: 'brightness(1.6)' }, { transform: 'scale(1)' }], { duration: 500 });
+    }
+    if (s && s.stage === 'results' && (!ps || ps.stage !== 'results' || !prev.g)) this.onResultsShown();
+  }
+
+  anim(el, frames, opts) {
+    if (!el || !el.animate || this.rm) return null;
+    return el.animate(frames, opts);
+  }
+
+  onModalShown(kind) {
+    const { g } = this.state;
+    if (!this.rm) {
+      this.anim(this.overlayRef.current, [{ opacity: 0 }, { opacity: 1 }], { duration: 180, easing: 'ease-out' });
+      this.anim(this.modalRef.current, [{ opacity: 0, transform: 'translateY(18px) scale(.94)' }, { opacity: 1, transform: 'none' }], { duration: 260, easing: 'cubic-bezier(.2,.9,.3,1.2)' });
+    }
+    if (kind === 'success') this.countUp();
+    if (kind === 'timeout') {
+      clearTimeout(this.autoTimer);
+      this.autoTimer = setTimeout(() => {
+        const s = this.state.s;
+        if (s && s.modal === 'timeout') this.commit(g.state.toResults(s));
+      }, g.CONFIG.timeoutAutoAdvanceMs);
+    }
+  }
+
+  countUp() {
+    const { g } = this.state;
+    if (this.rm) { this.setState({ bonusCount: g.CONFIG.pointsPerLevel }); return; }
+    const total = g.CONFIG.pointsPerLevel, dur = g.CONFIG.anim.scoreCount, t0 = performance.now();
+    const step = (t) => {
+      const p = Math.min(1, (t - t0) / dur);
+      this.setState({ bonusCount: Math.round(total * (1 - Math.pow(1 - p, 3))) });
+      if (p < 1) requestAnimationFrame(step);
+    };
+    this.setState({ bonusCount: 0 });
+    requestAnimationFrame(step);
+    // Гарантоване фінальне значення, навіть якщо rAF призупинено (фонова вкладка).
+    clearTimeout(this.countTimer);
+    this.countTimer = setTimeout(() => this.setState({ bonusCount: total }), dur + 50);
+  }
+
+  animateMsg() {
+    this.anim(this.msgRef.current, [{ opacity: 0.2, transform: 'translateX(6px)' }, { opacity: 1, transform: 'none' }], { duration: 220, easing: 'ease-out' });
+    this.anim(this.mascotRef.current, [{ transform: 'translateY(0)' }, { transform: 'translateY(-4px)' }, { transform: 'translateY(0)' }], { duration: 300, easing: 'ease-in-out' });
+  }
+
+  onResultsShown() {
+    const { g, s } = this.state;
+    if (!g || !s) return;
+    const complete = g.scoring.totalScore(s.levels) === 100;
+    if (complete && this.celebrated !== s.finishedAt) {
+      this.celebrated = s.finishedAt;
+      setTimeout(() => g.sfx.final(), 150);
+      requestAnimationFrame(() => {
+        this.anim(this.burstRef.current, [{ opacity: 0, transform: 'scale(.6) rotate(-20deg)' }, { opacity: 1, transform: 'scale(1.08) rotate(6deg)' }, { opacity: 0.9, transform: 'scale(1) rotate(0)' }], { duration: 900, easing: 'ease-out' });
+        this.anim(this.resultMascotRef.current, [{ transform: 'translateY(0)' }, { transform: 'translateY(-14px)' }, { transform: 'translateY(0)' }, { transform: 'translateY(-7px)' }, { transform: 'translateY(0)' }], { duration: 900, easing: 'ease-in-out' });
+      });
+    }
+  }
+
+  commit(ns, extra = {}) {
+    const { g } = this.state;
+    g.storage.saveSession(ns);
+    this.setState({ s: ns, now: Date.now(), ...extra });
+  }
+
+  tick() {
+    const { g, s } = this.state;
+    if (!g || !s) return;
+    const now = Date.now();
+    // Під час паузи (відкрите вікно) час не спливає; звук — лише один раз, у момент реального завершення.
+    if (g.timer.isExpired(s, now)) {
+      const ns = g.state.checkTimeout(s, now, true);
+      if (ns !== s) {
+        if (this.timeoutSounded !== s.startedAt) { this.timeoutSounded = s.startedAt; g.sfx.error(); }
+        this.commit(ns, { holdUntil: 0 });
+        return;
+      }
+    }
+    if (s.stage === 'main' && !g.state.isPaused(s)) this.setState({ now });
+  }
+
+  keyEls() {
+    const root = this.stageRef.current;
+    return root ? Array.from(root.querySelectorAll('[data-key-idx]')) : [];
+  }
+
+  pulse(indices) {
+    if (this.rm) return;
+    const els = this.keyEls();
+    indices.forEach((i) => {
+      const el = els[i];
+      if (!el) return;
+      const p = el.querySelector('[data-pulse]');
+      this.anim(p, [{ opacity: 1, transform: 'scale(.9)' }, { opacity: 0, transform: 'scale(1.12)' }], { duration: this.state.g.CONFIG.anim.toggle, easing: 'ease-out' });
+    });
+  }
+
+  sweep() {
+    if (this.rm) return;
+    const { anim } = this.state.g.CONFIG;
+    this.keyEls().forEach((el, i) => {
+      this.anim(el, [{ filter: 'brightness(1)' }, { filter: 'brightness(1.7) drop-shadow(0 0 16px #36efa6)' }, { filter: 'brightness(1)' }], { duration: anim.success, delay: i * anim.successStagger, easing: 'ease-out' });
+    });
+  }
+
+  shake() {
+    this.anim(this.boardRef.current, [{ transform: 'translateX(0)' }, { transform: 'translateX(-8px)' }, { transform: 'translateX(7px)' }, { transform: 'translateX(-4px)' }, { transform: 'translateX(0)' }], { duration: 260 });
+  }
+
+  press(idx) {
+    const { g, s } = this.state;
+    if (!g || !s) return;
+    const now = Date.now();
+    // Захист від подвійних натискань: та сама клавіша — не частіше ніж раз на pressCooldownMs×2, будь-яка — раз на 60 мс.
+    if (now < this.lockUntil) return;
+    if (idx === this.lastIdx && now - this.lastAt < g.CONFIG.pressCooldownMs * 2) return;
+    const ab = g.state.activeBoard(s);
+    if (!ab) return;
+    const r = g.state.pressCell(s, idx, now);
+    if (r.result === 'blocked') return;
+    if (r.result === 'exhausted') { this.lockUntil = now + 250; g.sfx.error(); this.shake(); return; }
+    this.lockUntil = now + 60;
+    this.lastIdx = idx;
+    this.lastAt = now;
+    const nab = g.state.activeBoard(r.s);
+    g.sfx.key();
+    if (nab.rec.board[idx]) g.sfx.lightOn(); else g.sfx.lightOff();
+    const extra = {};
+    if (r.result === 'solved') {
+      const delay = this.rm ? 150 : g.CONFIG.anim.popupDelay;
+      if (r.s.stage === 'main') {
+        extra.holdUntil = now + delay;
+        setTimeout(() => this.setState({ now: Date.now() }), delay + 20);
+      }
+      setTimeout(() => g.sfx.success(), 120);
+    } else if (nab.limit && nab.rec.movesUsed >= nab.limit) {
+      setTimeout(() => g.sfx.error(), 160);
+    }
+    this.commit(r.s, extra);
+    const affected = g.puzzle.affected(ab.n, idx);
+    requestAnimationFrame(() => {
+      this.pulse(affected);
+      if (r.result === 'solved') this.sweep();
+    });
+  }
+
+  doUndo() {
+    const { g, s } = this.state;
+    if (!g || !s) return;
+    const ab = g.state.activeBoard(s);
+    const ns = g.state.undo(s);
+    if (ns === s) return;
+    const last = ab.rec.history[ab.rec.history.length - 1];
+    g.sfx.undo();
+    this.commit(ns);
+    requestAnimationFrame(() => this.pulse(g.puzzle.affected(ab.n, last)));
+  }
+
+  doReset() {
+    const { g, s } = this.state;
+    if (!g || !s) return;
+    if (s.stage === 'training') { g.sfx.reset(); this.commit(g.state.resetLevel(s, Date.now())); return; }
+    if (s.stage === 'main') {
+      const ab = g.state.activeBoard(s);
+      if (!ab || s.modal || ab.rec.status === 'solved') return;
+      g.sfx.ui();
+      this.commit(g.state.openModal(s, 'confirmReset', Date.now()));
+    }
+  }
+
+  modalPrimary() {
+    const { g, s } = this.state;
+    if (!g || !s || !s.modal) return;
+    const now = Date.now();
+    const st = g.state;
+    switch (s.modal) {
+      case 'success': g.sfx.ui(); this.commit(st.advance(s, now)); break;
+      case 'returnDeferred': g.sfx.ui(); this.commit(st.closeModal(s, now)); break;
+      case 'timeout': clearTimeout(this.autoTimer); this.commit(st.toResults(s)); break;
+      case 'confirmReset': g.sfx.reset(); this.commit(st.resetLevel(s, now)); break;
+      case 'confirmSkip': g.sfx.ui(); this.commit(st.confirmSkip(s, now)); break;
+      case 'confirmFinish': g.sfx.ui(); this.commit(st.finishEarly(s, now)); break;
+      case 'confirmHome': g.storage.clearSession(); this.commit(st.createIntro(s.team), { teamDraft: s.team || '', teamError: '', exportMsg: '' }); break;
+      case 'confirmReplay': g.storage.clearSession(); this.commit(st.startTraining(s.team), { exportMsg: '' }); break;
+      default: this.commit(st.closeModal(s, now));
+    }
+  }
+
+  modalSecondary() {
+    const { g, s } = this.state;
+    if (!g || !s || !s.modal || !String(s.modal).startsWith('confirm')) return;
+    g.sfx.ui();
+    this.commit(g.state.closeModal(s, Date.now()));
+  }
+
+  handleKey(e) {
+    const { g, s } = this.state;
+    if (!g || !s) return;
+    const tag = e.target && e.target.tagName;
+    if (tag === 'INPUT' || tag === 'TEXTAREA') return;
+    if (s.modal) {
+      if (this.visibleModal(this.state) == null) return;
+      if (e.key === 'Escape') { e.preventDefault(); this.modalSecondary(); }
+      else if (e.key === 'Enter') { e.preventDefault(); this.modalPrimary(); }
+      return;
+    }
+    if (s.stage !== 'training' && s.stage !== 'main') return;
+    if (((e.ctrlKey || e.metaKey) && e.code === 'KeyZ') || e.key === 'Backspace') { e.preventDefault(); this.doUndo(); return; }
+    if (e.ctrlKey || e.metaKey || e.altKey || e.repeat) return;
+    const m = /^Key([A-Z])$/.exec(e.code || '');
+    if (!m) return;
+    const ab = g.state.activeBoard(s);
+    const idx = g.puzzle.LETTERS.indexOf(m[1]);
+    if (!ab || idx < 0 || idx >= ab.n * ab.n) return;
+    e.preventDefault();
+    this.press(idx);
+  }
+
+  startTraining() {
+    const { g, s, teamDraft } = this.state;
+    if (!g) return;
+    const team = g.state.sanitizeTeam(teamDraft);
+    if (!team) { g.sfx.error(); this.setState({ teamError: 'Введіть назву команди, щоб продовжити.' }); return; }
+    g.sfx.ui();
+    this.commit(g.state.startTraining(team), { teamDraft: team, teamError: '' });
+  }
+
+  async doExport() {
+    const { g, s, exporting } = this.state;
+    if (!g || !s || exporting) return;
+    this.setState({ exporting: true, exportMsg: '' });
+    try {
+      const d = g.scoring.resultsSummary(s, Date.now());
+      await g.exporter.downloadResultsPng(d);
+      this.setState({ exportMsg: 'PNG збережено: ' + g.exporter.pngFileName(d.team, d.score), exportOk: true });
+    } catch (err) {
+      console.error(err);
+      this.setState({ exportMsg: 'Не вдалося створити PNG. Спробуйте ще раз.', exportOk: false });
+    } finally {
+      this.setState({ exporting: false });
+    }
+  }
+
+  keycap(v, letter, mode) {
+    const st = mode === 'success' ? (v ? 'success' : 'inactive') : v ? 'active' : mode === 'locked' ? 'disabled' : 'inactive';
+    const look = {
+      active: ['#eaffff', '0 0 7px #26d9ff,0 0 22px #00a2ff'],
+      success: ['#bfffe5', '0 0 16px #36efa6'],
+      disabled: ['#617084', 'none'],
+      inactive: ['#9babc4', 'none'],
+    }[st];
+    return { src: 'assets/keycaps/' + st + '.svg', color: look[0], shadow: look[1], letter };
+  }
+
+  renderVals() {
+    const R = window.__resources || {};
+    const A = {};
+    for (const p of Component.ASSETS) A['a_' + p.replace(/[^a-z0-9]/gi, '_')] = R['a_' + p.replace(/[^a-z0-9]/gi, '_')] || 'assets/' + p;
+    const fix = (v) => {
+      if (typeof v === 'string') return v.startsWith('assets/') ? (R['a_' + v.slice(7).replace(/[^a-z0-9]/gi, '_')] || v) : v;
+      if (Array.isArray(v)) return v.map(fix);
+      if (v && typeof v === 'object' && Object.getPrototypeOf(v) === Object.prototype && !('current' in v)) { const o = {}; for (const k in v) o[k] = fix(v[k]); return o; }
+      return v;
+    };
+    const out = fix(this._renderVals());
+    out.A = A;
+    return out;
+  }
+
+  _renderVals() {
+    const { g, s, now, scale } = this.state;
+    const base = {
+      stageRef: this.stageRef, boardRef: this.boardRef, scoreRef: this.scoreRef, msgRef: this.msgRef, mascotRef: this.mascotRef,
+      modalRef: this.modalRef, overlayRef: this.overlayRef, burstRef: this.burstRef, resultMascotRef: this.resultMascotRef,
+      scale, notReady: !g || !s, loadText: this.state.loadError || 'Завантаження системи перевірки…',
+      soundLabel: this.state.sound ? 'ЗВУК: УВІМК.' : 'ЗВУК: ВИМК.', soundColor: this.state.sound ? '#d9f3ff' : '#8aa0b5', sound: this.state.sound,
+      onToggleSound: () => { if (!g) return; const on = !this.state.sound; g.sfx.setEnabled(on); this.setState({ sound: on }); },
+      r: { levels: [], ending: {} }, m: {}, keys: [], dots: [], introKeys: [],
+    };
+    if (!g || !s) return base;
+    const T = g.TEXTS;
+    const stage = s.stage;
+    const vals = {
+      ...base,
+      isIntro: stage === 'intro', isTraining: stage === 'training', isMain: stage === 'main', isResults: stage === 'results',
+      isPlay: stage === 'training' || stage === 'main',
+      screenLabel: { intro: '01 Вступ', training: '02 Тренування', main: '03 Основна гра', results: '05 Результати' }[stage],
+      team: s.team, timerMinutes: g.CONFIG.timerMinutes,
+    };
+
+    if (stage === 'intro') {
+      const plus = [1, 3, 4, 5, 7];
+      vals.introKeys = g.puzzle.labels(3).map((L, i) => this.keycap(plus.includes(i) ? 1 : 0, L, 'normal'));
+      vals.teamDraft = this.state.teamDraft;
+      vals.teamMax = g.CONFIG.teamNameMax;
+      vals.teamHint = this.state.teamError || `До ${g.CONFIG.teamNameMax} символів. Наприклад: 109-К, BrainStorm, Кмітливі котики`;
+      vals.teamHintColor = this.state.teamError ? '#ff5269' : '#9eb7d2';
+      vals.onTeamChange = (e) => this.setState({ teamDraft: e.target.value.slice(0, g.CONFIG.teamNameMax), teamError: '' });
+      vals.onTeamKey = (e) => { if (e.key === 'Enter') { e.preventDefault(); this.startTraining(); } };
+      vals.onStartTraining = () => this.startTraining();
+    }
+
+    if (vals.isPlay) {
+      const ab = g.state.activeBoard(s);
+      const n = ab.n;
+      const rec = ab.rec;
+      const solved = stage === 'training' ? rec.solved : rec.status === 'solved';
+      const exhausted = stage === 'main' && !solved && rec.movesUsed >= ab.limit;
+      const locked = !!s.modal || s.finished || solved;
+      const mode = solved ? 'success' : exhausted ? 'locked' : 'normal';
+      const fs = { 3: '74px', 4: '58px', 5: '46px' }[n];
+      const tgt = g.puzzle.parseBoard(ab.target);
+      const marks = (this.props.targetMarks ?? true) && !solved;
+      const matched = g.puzzle.matchCount(rec.board, tgt);
+      vals.patternName = ab.name;
+      vals.sizeText = `${n} × ${n}`;
+      vals.targetGap = { 3: '6px', 4: '5px', 5: '4px' }[n];
+      vals.targetCells = tgt.map((t) => t
+        ? { bg: solved ? '#36efa6' : '#2ee6ff', border: solved ? '#9dffd6' : '#a8f6ff', shadow: solved ? '0 0 8px #36efa6' : '0 0 8px #00b5ff' }
+        : { bg: '#0b1a2b', border: '#21405e', shadow: 'none' });
+      vals.targetAria = 'Зразок: ' + tgt.map((t, i) => (t ? g.puzzle.LETTERS[i] : '')).join(' ');
+      vals.matchText = matched + ' / ' + n * n;
+      vals.matchPct = Math.round((matched / (n * n)) * 100) + '%';
+      vals.matchColor = matched === n * n ? '#36efa6' : '#ffd56d';
+      vals.boardCols = `repeat(${n}, 1fr)`;
+      vals.boardGap = (565 / n * 0.04).toFixed(1) + 'px';
+      vals.keys = rec.board.map((v, i) => {
+        const L = g.puzzle.LETTERS[i];
+        return {
+          ...this.keycap(v, L, mode), idx: i, fs, on: !!v, disabled: locked,
+          mark: marks, markBg: tgt[i] ? '#7ff3ff' : 'transparent', markBorder: tgt[i] ? '#d8fdff' : '#6d86a2', markShadow: tgt[i] ? '0 0 8px #26d9ff' : 'none',
+          cursor: locked || exhausted ? 'not-allowed' : 'pointer',
+          aria: `Клавіша ${L}, ${v ? 'світиться' : 'погашена'}, у зразку ${tgt[i] ? 'світиться' : 'погашена'}`,
+          onPress: () => this.press(i),
+        };
+      });
+      const msg = s.msg || { text: '', mood: 'neutral' };
+      vals.msgText = msg.text;
+      vals.msgPose = 'assets/mascot/' + (msg.mood || 'neutral') + '.png';
+      const canUndo = rec.history.length > 0 && !locked;
+      vals.undoDisabled = !canUndo;
+      vals.undoBg = canUndo ? 'assets/buttons/primary-normal.svg' : 'assets/buttons/disabled-disabled.svg';
+      vals.undoColor = canUndo ? '#ecf8ff' : '#71889c';
+      vals.undoPe = canUndo ? 'auto' : 'none';
+      vals.onUndo = () => this.doUndo();
+      vals.onReset = () => this.doReset();
+      vals.resetLabel = stage === 'training' ? 'Скинути' : 'Скинути рівень';
+
+      if (stage === 'training') {
+        const passed = rec.passed;
+        vals.targetNote = `Натискань: ${rec.moves} · мінімум — ${g.TRAINING.min}`;
+        vals.nextDisabled = !passed;
+        vals.nextBg = passed ? 'assets/buttons/success-normal.svg' : 'assets/buttons/disabled-disabled.svg';
+        vals.nextColor = passed ? '#effff8' : '#71889c';
+        vals.nextPe = passed ? 'auto' : 'none';
+        vals.nextIcon = passed ? 'assets/icons/next.svg' : 'assets/icons/warning.svg';
+        vals.nextSub = passed ? `Запустить таймер ${g.CONFIG.timerMinutes} хв` : 'Пройди тренування, щоб відкрити';
+        vals.onStartMain = () => { const st = this.state.s; if (!st.training.passed) return; g.sfx.ui(); this.commit(g.state.startMain(st, Date.now())); };
+      } else {
+        const lv = g.LEVELS[s.current];
+        const left = ab.limit - rec.movesUsed;
+        vals.levelNum = s.current + 1;
+        vals.cellCount = n * n;
+        vals.targetNote = 'Повторні спроби необмежені й не знімають балів';
+        vals.limit = ab.limit;
+        vals.movesUsed = rec.movesUsed;
+        vals.attempt = rec.attempts;
+        vals.isReturned = !!rec.wasDeferred && rec.status !== 'solved';
+        vals.movesColor = left <= 0 && !solved ? '#ff5269' : left <= 2 && !solved ? '#ffa531' : '#f2fbff';
+        const remain = g.timer.remainingMs(s, now);
+        vals.timerText = g.timer.formatMs(remain, true);
+        vals.timerLabel = g.state.isPaused(s) ? 'ПАУЗА' : 'ЧАС';
+        vals.timerColor = remain <= 60000 ? '#ff5269' : remain <= 180000 ? '#ffa531' : '#f2fbff';
+        vals.score = g.scoring.totalScore(s.levels);
+        vals.dots = s.levels.map((l, i) => {
+          if (l.status === 'solved') return { border: '#36efa6', bg: '#36efa6', shadow: '0 0 12px #36efa6' };
+          if (i === s.current) return { border: '#1cbfff', bg: '#00cfff55', shadow: '0 0 12px #00bfff, inset 0 0 8px #00bfff' };
+          if (l.status === 'deferred') return { border: '#ffa531', bg: 'transparent', shadow: '0 0 8px #ffa53188' };
+          return { border: '#1cbfff', bg: 'transparent', shadow: 'none' };
+        });
+        vals.progressAria = 'Пройдено рівнів: ' + g.scoring.solvedCount(s.levels) + ' з 4';
+        vals.onSkip = () => { const st = this.state.s; if (st.modal) return; g.sfx.ui(); this.commit(g.state.requestSkip(st, Date.now())); };
+      }
+    }
+
+    if (stage === 'results') {
+      const d = g.scoring.resultsSummary(s, now);
+      vals.r = {
+        ...d, notComplete: !d.complete, poseSrc: 'assets/mascot/' + d.ending.pose + '.png',
+        levels: d.levels.map((l) => ({ ...l, iconSrc: 'assets/icons/' + l.icon + '.svg', statusUpper: l.status.toUpperCase() })),
+      };
+      vals.onHome = () => { g.sfx.ui(); this.commit(g.state.openModal(this.state.s, 'confirmHome')); };
+      vals.onReplay = () => { g.sfx.ui(); this.commit(g.state.openModal(this.state.s, 'confirmReplay')); };
+      vals.onExport = () => this.doExport();
+      vals.exporting = this.state.exporting;
+      vals.exportLabel = this.state.exporting ? 'Готуємо PNG…' : 'Результати у PNG';
+      vals.exportMsg = this.state.exportMsg;
+      vals.exportMsgColor = this.state.exportOk ? '#36efa6' : '#ff5269';
+    }
+
+    const vm = this.visibleModal(this.state);
+    vals.showModal = !!vm;
+    if (vm) vals.m = this.modalVals(vm);
+    vals.onModalPrimary = () => this.modalPrimary();
+    vals.onModalSecondary = () => this.modalSecondary();
+    return vals;
+  }
+
+  wasDeferred(s) {
+    return !!(s.levels[s.current] && s.levels[s.current].wasDeferred);
+  }
+
+  modalVals(kind) {
+    const { g, s } = this.state;
+    const M = g.TEXTS.modals[kind];
+    const big = kind === 'success' || kind === 'returnDeferred' || kind === 'timeout';
+    const m = {
+      big, confirm: !big, title: M.title, pose: 'assets/mascot/' + M.pose + '.png', bg: 'assets/' + (M.bg || 'popups/confirmation.svg'),
+      bonus: M.bonus, bonusColor: '#ffa531', bonusGlow: '#ffa53155', bonusSize: '70px', text: M.text,
+      primary: M.action, secondary: M.cancel, primaryBg: 'assets/buttons/primary-normal.svg', primaryIcon: 'assets/icons/next.svg',
+    };
+    if (kind === 'success') {
+      m.bonus = '+' + this.state.bonusCount + ' БАЛІВ';
+      m.bonusColor = '#36efa6';
+      m.bonusGlow = '#1afe8570';
+      m.text = s.msg ? s.msg.text : '';
+      m.primaryBg = 'assets/buttons/success-normal.svg';
+      if (g.state.allSolved(s)) m.primary = 'ДО РЕЗУЛЬТАТІВ';
+      else {
+        const nx = g.state.pickNext(s.levels, s.current);
+        m.primary = nx != null && s.levels[nx].status === 'deferred' ? 'ДО ВІДКЛАДЕНОГО РІВНЯ' : 'НАСТУПНИЙ РІВЕНЬ';
+      }
+    } else if (kind === 'returnDeferred') {
+      m.bonus = 'РІВЕНЬ ' + (s.current + 1) + ' / 4';
+      m.bonusSize = '58px';
+    } else if (kind === 'timeout') {
+      m.bonusColor = '#ff5269';
+      m.bonusGlow = '#ff526955';
+      m.bonusSize = '38px';
+    } else {
+      m.primaryBg = kind === 'confirmReset' || kind === 'confirmSkip' ? 'assets/buttons/warning-normal.svg' : 'assets/buttons/danger-normal.svg';
+      m.primaryIcon = kind === 'confirmReset' ? 'assets/icons/reset.svg' : kind === 'confirmSkip' ? 'assets/icons/skip.svg' : kind === 'confirmFinish' ? 'assets/icons/check.svg' : kind === 'confirmHome' ? 'assets/icons/home.svg' : 'assets/icons/reset.svg';
+    }
+    return m;
+  }
+}
+</script>
+</body>
+</html>
